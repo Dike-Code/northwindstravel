@@ -1,280 +1,590 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Northwinds Travel Co. | Curated Global Journeys</title>
-  <meta name="description" content="Northwinds Travel Co. curates luxury escapes, retreats, family travel, and special travel support across destinations worldwide." />
-  <meta name="theme-color" content="#0f3431" />
-  <meta property="og:title" content="Northwinds Travel Co. | Curated Global Journeys" />
-  <meta property="og:description" content="Luxury escapes, retreats, family travel, and special travel support across destinations worldwide." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://picsum.photos/seed/northwinds-og/1200/630" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "TravelAgency",
-    "name": "Northwinds Travel Co.",
-    "description": "Northwinds Travel Co. curates luxury escapes, retreats, family travel, and special travel support across destinations worldwide.",
-    "areaServed": "Worldwide",
-    "url": "https://www.northwindstravelco.com",
-    "telephone": "+1-000-000-0000",
-    "email": "hello@northwindstravelco.com"
-  }
-  </script>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <a href="#main" class="skip-link">Skip to content</a>
-  <header class="site-header">
-    <div class="container header-row">
-      <a href="#top" class="brand" aria-label="Northwinds Travel Co. home">
-        <span class="brand-mark" aria-hidden="true" style="background:none;box-shadow:none;width:auto;height:3.4rem;padding:0;border-radius:0;overflow:visible;"><img src="assets/logo.jpg" alt="Northwinds Travel Co. logo" style="height:3.4rem;width:auto;display:block;border-radius:.4rem;" /></span>
-        <span>
-          <span class="brand-name" style="display:none">Northwinds Travel Co.</span>
-          <span class="brand-sub" style="display:none">Curated global journeys</span>
-        </span>
-      </a>
-      <nav class="nav" id="nav" aria-label="Primary navigation">
-        <a href="#packages">Packages</a>
-        <a href="#why-us">Why Us</a>
-        <a href="#process">How It Works</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <div class="header-actions">
-        <button class="icon-btn" data-theme-toggle aria-label="Switch theme">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-        </button>
-        <button class="icon-btn menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
-        </button>
-      </div>
-    </div>
-  </header>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Northwinds Travel Co. | Curated Global Journeys</title>
+		<meta
+			name="description"
+			content="Northwinds Travel Co. curates luxury escapes, retreats, family travel, and special travel support across destinations worldwide."
+		/>
+		<meta name="theme-color" content="#0f3431" />
+		<meta
+			property="og:title"
+			content="Northwinds Travel Co. | Curated Global Journeys"
+		/>
+		<meta
+			property="og:description"
+			content="Luxury escapes, retreats, family travel, and special travel support across destinations worldwide."
+		/>
+		<meta property="og:type" content="website" />
+		<meta
+			property="og:image"
+			content="https://picsum.photos/seed/northwinds-og/1200/630"
+		/>
+		<meta name="twitter:card" content="summary_large_image" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
+			rel="stylesheet"
+		/>
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "TravelAgency",
+				"name": "Northwinds Travel Co.",
+				"description": "Northwinds Travel Co. curates luxury escapes, retreats, family travel, and special travel support across destinations worldwide.",
+				"areaServed": "Worldwide",
+				"url": "https://www.northwindstravelco.com",
+				"telephone": "+1-000-000-0000",
+				"email": "hello@northwindstravelco.com"
+			}
+		</script>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<a href="#main" class="skip-link">Skip to content</a>
+		<header class="site-header" style="overflow-y: hidden">
+			<div class="container header-row">
+				<a
+					href="#top"
+					class="brand"
+					aria-label="Northwinds Travel Co. home"
+				>
+					<span
+						class="brand-mark"
+						aria-hidden="true"
+						style="
+							background: none;
+							box-shadow: none;
+							width: auto;
+							height: 3.4rem;
+							margin: 20px 0;
+							border-radius: 0;
+							overflow: visible;
+							display: flex;
+							align-items: center;
+						"
+						><img
+							src="assets/logo.jpg"
+							alt="Northwinds Travel Co. logo"
+							style="
+								height: 80px;
+								width: 130px;
+								object-fit: cover;
+								display: flex;
+								flex-direction: column;
+								align-items: center;
+								justify-content: center;
+								border-radius: 0.4rem;
+							"
+					/></span>
+					<span>
+						<span class="brand-name" style="display: none"
+							>Northwinds Travel Co.</span
+						>
+						<span class="brand-sub" style="display: none"
+							>Curated global journeys</span
+						>
+					</span>
+				</a>
+				<nav class="nav" id="nav" aria-label="Primary navigation">
+					<a href="#packages">Packages</a>
+					<a href="#why-us">Why Us</a>
+					<a href="#process">How It Works</a>
+					<a href="#faq">FAQ</a>
+					<a href="#contact">Contact</a>
+				</nav>
+				<div class="header-actions">
+					<button
+						class="icon-btn"
+						data-theme-toggle
+						aria-label="Switch theme"
+					>
+						<svg
+							width="20"
+							height="20"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+						>
+							<path
+								d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"
+							/>
+						</svg>
+					</button>
+					<button
+						class="icon-btn menu-toggle"
+						id="menuToggle"
+						aria-label="Open menu"
+						aria-expanded="false"
+						aria-controls="nav"
+					>
+						<svg
+							width="20"
+							height="20"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+						>
+							<path d="M3 12h18M3 6h18M3 18h18" />
+						</svg>
+					</button>
+				</div>
+			</div>
+		</header>
 
-  <main id="main">
-    <section class="hero" id="top">
-      <div class="container hero-grid">
-        <div class="hero-copy reveal visible">
-          <span class="eyebrow" style="color:rgba(255,255,255,.8)">Luxury escapes • retreats • family travel • worldwide</span>
-          <h1>Curated journeys with beauty, ease, and intention.</h1>
-          <p>Luxury escapes, restorative retreats, family travel, and high-touch planning across destinations worldwide.</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#contact">Start planning</a>
-            <a class="btn btn-secondary" href="#packages">View packages</a>
-          </div>
-        </div>
-        <aside class="hero-card reveal" aria-label="Quick contact card">
-          <span class="eyebrow" style="color:rgba(255,255,255,.76)">Private planning</span>
-          <h3 style="font-family:var(--font-display); font-size:var(--text-xl); line-height:1.05; margin-top:.5rem;">Fast, personal, and detail-led.</h3>
-          <p style="margin-top:.8rem">For deploy: replace the placeholders below with your real phone, WhatsApp, and email.</p>
-          <div class="inline-links">
-            <a class="mini-link" href="https://wa.me/10000000000" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-            <a class="mini-link" href="tel:+10000000000">Call</a>
-            <a class="mini-link" href="mailto:hello@northwindstravelco.com">Email</a>
-          </div>
-        </aside>
-      </div>
-    </section>
+		<main id="main">
+			<section class="hero" id="top">
+				<div class="container hero-grid">
+					<div class="hero-copy reveal visible">
+						<span
+							class="eyebrow"
+							style="color: rgba(255, 255, 255, 0.8)"
+							>Luxury escapes • retreats • family travel •
+							worldwide</span
+						>
+						<h1>
+							Curated journeys with beauty, ease, and intention.
+						</h1>
+						<p>
+							Luxury escapes, restorative retreats, family travel,
+							and high-touch planning across destinations
+							worldwide.
+						</p>
+						<div class="hero-actions">
+							<a class="btn btn-primary" href="#contact"
+								>Start planning</a
+							>
+							<a class="btn btn-secondary" href="#packages"
+								>View packages</a
+							>
+						</div>
+					</div>
+					<aside
+						class="hero-card reveal"
+						aria-label="Quick contact card"
+					>
+						<span
+							class="eyebrow"
+							style="color: rgba(255, 255, 255, 0.76)"
+							>Private planning</span
+						>
+						<h3
+							style="
+								font-family: var(--font-display);
+								font-size: var(--text-xl);
+								line-height: 1.05;
+								margin-top: 0.5rem;
+							"
+						>
+							Fast, personal, and detail-led.
+						</h3>
+						<p style="margin-top: 0.8rem">
+							For deploy: replace the placeholders below with your
+							real phone, WhatsApp, and email.
+						</p>
+						<div class="inline-links">
+							<a
+								class="mini-link"
+								href="https://wa.me/10000000000"
+								target="_blank"
+								rel="noopener noreferrer"
+								>WhatsApp</a
+							>
+							<a class="mini-link" href="tel:+10000000000"
+								>Call</a
+							>
+							<a
+								class="mini-link"
+								href="mailto:hello@northwindstravelco.com"
+								>Email</a
+							>
+						</div>
+					</aside>
+				</div>
+			</section>
 
-    <section class="trust-band">
-      <div class="container trust-row">
-        <div><strong>Global reach</strong><br>Worldwide packages and destination planning</div>
-        <div><strong>Premium feel</strong><br>Luxury design, mobile-ready, and inquiry-led</div>
-        <div><strong>Travel-first</strong><br>Standalone brand with clear public offers</div>
-        <div><strong>Deploy-ready</strong><br>Built as a static site ready for launch</div>
-      </div>
-    </section>
+			<section class="trust-band">
+				<div class="container trust-row">
+					<div>
+						<strong>Global reach</strong><br />Worldwide packages
+						and destination planning
+					</div>
+					<div>
+						<strong>Premium feel</strong><br />Luxury design,
+						mobile-ready, and inquiry-led
+					</div>
+					<div>
+						<strong>Travel-first</strong><br />Standalone brand with
+						clear public offers
+					</div>
+					<div>
+						<strong>Deploy-ready</strong><br />Built as a static
+						site ready for launch
+					</div>
+				</div>
+			</section>
 
-    <section class="section" id="packages">
-      <div class="container">
-        <span class="eyebrow reveal">Packages</span>
-        <h2 class="reveal">Simple, elevated, and ready to scale.</h2>
-        <div class="package-grid">
-          <article class="package-card reveal">
-            <span class="badge">Luxury</span>
-            <h3 style="margin-top:1rem">Signature World Escapes</h3>
-            <ul class="check-list">
-              <li>Custom itineraries</li>
-              <li>Premium stays</li>
-              <li>Celebration travel</li>
-            </ul>
-          </article>
-          <article class="package-card highlight reveal">
-            <span class="badge">Retreats</span>
-            <h3 style="margin-top:1rem">Soft Luxury Journeys</h3>
-            <ul class="check-list">
-              <li>Restorative getaways</li>
-              <li>Mother retreats</li>
-              <li>Wellness pacing</li>
-            </ul>
-          </article>
-          <article class="package-card reveal">
-            <span class="badge">Family</span>
-            <h3 style="margin-top:1rem">Family & Reunion Travel</h3>
-            <ul class="check-list">
-              <li>Multi-traveler coordination</li>
-              <li>Comfort-focused planning</li>
-              <li>International family travel</li>
-            </ul>
-          </article>
-          <article class="package-card reveal">
-            <span class="badge">Support</span>
-            <h3 style="margin-top:1rem">Special Travel Support</h3>
-            <ul class="check-list">
-              <li>Complex trip planning</li>
-              <li>Calm logistics support</li>
-              <li>Private coordination</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
+			<section class="section" id="packages">
+				<div class="container">
+					<span class="eyebrow reveal">Packages</span>
+					<h2 class="reveal">
+						Simple, elevated, and ready to scale.
+					</h2>
+					<div class="package-grid">
+						<article class="package-card reveal">
+							<span class="badge">Luxury</span>
+							<h3 style="margin-top: 1rem">
+								Signature World Escapes
+							</h3>
+							<ul class="check-list">
+								<li>Custom itineraries</li>
+								<li>Premium stays</li>
+								<li>Celebration travel</li>
+							</ul>
+						</article>
+						<article class="package-card highlight reveal">
+							<span class="badge">Retreats</span>
+							<h3 style="margin-top: 1rem">
+								Soft Luxury Journeys
+							</h3>
+							<ul class="check-list">
+								<li>Restorative getaways</li>
+								<li>Mother retreats</li>
+								<li>Wellness pacing</li>
+							</ul>
+						</article>
+						<article class="package-card reveal">
+							<span class="badge">Family</span>
+							<h3 style="margin-top: 1rem">
+								Family & Reunion Travel
+							</h3>
+							<ul class="check-list">
+								<li>Multi-traveler coordination</li>
+								<li>Comfort-focused planning</li>
+								<li>International family travel</li>
+							</ul>
+						</article>
+						<article class="package-card reveal">
+							<span class="badge">Support</span>
+							<h3 style="margin-top: 1rem">
+								Special Travel Support
+							</h3>
+							<ul class="check-list">
+								<li>Complex trip planning</li>
+								<li>Calm logistics support</li>
+								<li>Private coordination</li>
+							</ul>
+						</article>
+					</div>
+				</div>
+			</section>
 
-    <section class="section" id="why-us">
-      <div class="container section-split">
-        <div class="reveal">
-          <span class="eyebrow">Why us</span>
-          <h2>Luxury should feel clear from the first click.</h2>
-          <p class="muted">Strong first impression, fast contact access, simple package architecture, and a premium visual identity built to welcome people in.</p>
-        </div>
-        <div class="feature-grid reveal">
-          <article class="feature-card">
-            <div class="feature-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.77 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg></div>
-            <h3>Editorial look</h3>
-            <p class="muted">A more refined visual language with premium typography and stronger imagery.</p>
-          </article>
-          <article class="feature-card">
-            <div class="feature-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></div>
-            <h3>Better flow</h3>
-            <p class="muted">Visitors can move quickly from interest to package to inquiry.</p>
-          </article>
-          <article class="feature-card">
-            <div class="feature-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20V10M18 20V4M6 20v-4"/></svg></div>
-            <h3>Deploy-ready structure</h3>
-            <p class="muted">SEO metadata, schema, accessibility basics, and responsive design are already in place.</p>
-          </article>
-        </div>
-      </div>
-    </section>
+			<section class="section" id="why-us">
+				<div class="container section-split">
+					<div class="reveal">
+						<span class="eyebrow">Why us</span>
+						<h2>Luxury should feel clear from the first click.</h2>
+						<p class="muted">
+							Strong first impression, fast contact access, simple
+							package architecture, and a premium visual identity
+							built to welcome people in.
+						</p>
+					</div>
+					<div class="feature-grid reveal">
+						<article class="feature-card">
+							<div class="feature-icon" aria-hidden="true">
+								<svg
+									width="18"
+									height="18"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+								>
+									<path
+										d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.77 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z"
+									/>
+								</svg>
+							</div>
+							<h3>Editorial look</h3>
+							<p class="muted">
+								A more refined visual language with premium
+								typography and stronger imagery.
+							</p>
+						</article>
+						<article class="feature-card">
+							<div class="feature-icon" aria-hidden="true">
+								<svg
+									width="18"
+									height="18"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+								>
+									<path d="M3 12h18M3 6h18M3 18h18" />
+								</svg>
+							</div>
+							<h3>Better flow</h3>
+							<p class="muted">
+								Visitors can move quickly from interest to
+								package to inquiry.
+							</p>
+						</article>
+						<article class="feature-card">
+							<div class="feature-icon" aria-hidden="true">
+								<svg
+									width="18"
+									height="18"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+								>
+									<path d="M12 20V10M18 20V4M6 20v-4" />
+								</svg>
+							</div>
+							<h3>Deploy-ready structure</h3>
+							<p class="muted">
+								SEO metadata, schema, accessibility basics, and
+								responsive design are already in place.
+							</p>
+						</article>
+					</div>
+				</div>
+			</section>
 
-    <section class="section" id="process">
-      <div class="container">
-        <span class="eyebrow reveal">How it works</span>
-        <h2 class="reveal">A smoother path from inquiry to departure.</h2>
-        <div class="process">
-          <article class="step reveal"><span class="eyebrow">01</span><h3 style="margin-top:.75rem">Share the vision</h3><p class="muted" style="margin-top:.6rem">Tell us where you want to go and how you want to travel.</p></article>
-          <article class="step reveal"><span class="eyebrow">02</span><h3 style="margin-top:.75rem">Receive direction</h3><p class="muted" style="margin-top:.6rem">We shape the right route, style, and pace for the trip.</p></article>
-          <article class="step reveal"><span class="eyebrow">03</span><h3 style="margin-top:.75rem">Refine the details</h3><p class="muted" style="margin-top:.6rem">We finalize logistics, preferences, and premium touches.</p></article>
-          <article class="step reveal"><span class="eyebrow">04</span><h3 style="margin-top:.75rem">Travel well</h3><p class="muted" style="margin-top:.6rem">Your journey is designed to feel seamless and elevated.</p></article>
-        </div>
-      </div>
-    </section>
+			<section class="section" id="process">
+				<div class="container">
+					<span class="eyebrow reveal">How it works</span>
+					<h2 class="reveal">
+						A smoother path from inquiry to departure.
+					</h2>
+					<div class="process">
+						<article class="step reveal">
+							<span class="eyebrow">01</span>
+							<h3 style="margin-top: 0.75rem">
+								Share the vision
+							</h3>
+							<p class="muted" style="margin-top: 0.6rem">
+								Tell us where you want to go and how you want to
+								travel.
+							</p>
+						</article>
+						<article class="step reveal">
+							<span class="eyebrow">02</span>
+							<h3 style="margin-top: 0.75rem">
+								Receive direction
+							</h3>
+							<p class="muted" style="margin-top: 0.6rem">
+								We shape the right route, style, and pace for
+								the trip.
+							</p>
+						</article>
+						<article class="step reveal">
+							<span class="eyebrow">03</span>
+							<h3 style="margin-top: 0.75rem">
+								Refine the details
+							</h3>
+							<p class="muted" style="margin-top: 0.6rem">
+								We finalize logistics, preferences, and premium
+								touches.
+							</p>
+						</article>
+						<article class="step reveal">
+							<span class="eyebrow">04</span>
+							<h3 style="margin-top: 0.75rem">Travel well</h3>
+							<p class="muted" style="margin-top: 0.6rem">
+								Your journey is designed to feel seamless and
+								elevated.
+							</p>
+						</article>
+					</div>
+				</div>
+			</section>
 
-    <section class="section">
-      <div class="container">
-        <div class="quote-band reveal">
-          <p>Beautiful travel brands feel calm, confident, and ready before the traveler even reaches out.</p>
-        </div>
-      </div>
-    </section>
+			<section class="section">
+				<div class="container">
+					<div class="quote-band reveal">
+						<p>
+							Beautiful travel brands feel calm, confident, and
+							ready before the traveler even reaches out.
+						</p>
+					</div>
+				</div>
+			</section>
 
-    <section class="section" id="faq">
-      <div class="container faq-grid">
-        <div class="reveal">
-          <span class="eyebrow">FAQ</span>
-          <h2>Clear, simple, ready.</h2>
-        </div>
-        <div class="reveal">
-          <details class="faq-item" open>
-            <summary>Can this go live as-is?</summary>
-            <p>Yes. Replace the placeholder domain, phone, WhatsApp, and email, then publish.</p>
-          </details>
-          <details class="faq-item" style="margin-top:1rem">
-            <summary>What should be updated before launch?</summary>
-            <p>Your real contact details, package names, destination pages if desired, and real brand imagery.</p>
-          </details>
-          <details class="faq-item" style="margin-top:1rem">
-            <summary>Does it work on mobile?</summary>
-            <p>Yes. The layout is responsive and designed to work across mobile and desktop.</p>
-          </details>
-        </div>
-      </div>
-    </section>
+			<section class="section" id="faq">
+				<div class="container faq-grid">
+					<div class="reveal">
+						<span class="eyebrow">FAQ</span>
+						<h2>Clear, simple, ready.</h2>
+					</div>
+					<div class="reveal">
+						<details class="faq-item" open>
+							<summary>Can this go live as-is?</summary>
+							<p>
+								Yes. Replace the placeholder domain, phone,
+								WhatsApp, and email, then publish.
+							</p>
+						</details>
+						<details class="faq-item" style="margin-top: 1rem">
+							<summary>
+								What should be updated before launch?
+							</summary>
+							<p>
+								Your real contact details, package names,
+								destination pages if desired, and real brand
+								imagery.
+							</p>
+						</details>
+						<details class="faq-item" style="margin-top: 1rem">
+							<summary>Does it work on mobile?</summary>
+							<p>
+								Yes. The layout is responsive and designed to
+								work across mobile and desktop.
+							</p>
+						</details>
+					</div>
+				</div>
+			</section>
 
-    <section class="section" id="contact">
-      <div class="container contact-wrap">
-        <div class="contact-card reveal">
-          <span class="eyebrow">Contact</span>
-          <h2>Start the conversation.</h2>
-          <p class="muted">A clean inquiry form for launch. Connect it to Netlify Forms, Formspree, or your CRM before going live.</p>
-          <form class="form-grid" name="northwinds-inquiry" method="post" data-netlify="true">
-            <input type="hidden" name="form-name" value="northwinds-inquiry" />
-            <div>
-              <label for="name">Full name</label>
-              <input id="name" name="name" type="text" placeholder="Your name" required />
-            </div>
-            <div>
-              <label for="email">Email</label>
-              <input id="email" name="email" type="email" placeholder="you@example.com" required />
-            </div>
-            <div>
-              <label for="interest">Travel type</label>
-              <select id="interest" name="interest">
-                <option>Signature World Escapes</option>
-                <option>Soft Luxury Journeys</option>
-                <option>Family & Reunion Travel</option>
-                <option>Special Travel Support</option>
-              </select>
-            </div>
-            <div>
-              <label for="message">Travel details</label>
-              <textarea id="message" name="message" placeholder="Destination, dates, travelers, and trip style"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Send inquiry</button>
-          </form>
-        </div>
-        <div class="reveal">
-          <div class="contact-card">
-            <span class="eyebrow">Direct</span>
-            <h3 style="font-family:var(--font-display); font-size:var(--text-xl); line-height:1.05; margin-top:.5rem;">Ready for your real details.</h3>
-            <div class="inline-links">
-              <a class="mini-link" href="https://wa.me/10000000000" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-              <a class="mini-link" href="tel:+10000000000">Call</a>
-              <a class="mini-link" href="mailto:hello@northwindstravelco.com">Email</a>
-            </div>
-            <p class="muted" style="margin-top:1rem">Recommended next swap before launch: real contact details, live domain, analytics ID, and original photography.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+			<section class="section" id="contact">
+				<div class="container contact-wrap">
+					<div class="contact-card reveal">
+						<span class="eyebrow">Contact</span>
+						<h2>Start the conversation.</h2>
+						<p class="muted">
+							A clean inquiry form for launch. Connect it to
+							Netlify Forms, Formspree, or your CRM before going
+							live.
+						</p>
+						<form
+							class="form-grid"
+							name="northwinds-inquiry"
+							method="post"
+							data-netlify="true"
+						>
+							<input
+								type="hidden"
+								name="form-name"
+								value="northwinds-inquiry"
+							/>
+							<div>
+								<label for="name">Full name</label>
+								<input
+									id="name"
+									name="name"
+									type="text"
+									placeholder="Your name"
+									required
+								/>
+							</div>
+							<div>
+								<label for="email">Email</label>
+								<input
+									id="email"
+									name="email"
+									type="email"
+									placeholder="you@example.com"
+									required
+								/>
+							</div>
+							<div>
+								<label for="interest">Travel type</label>
+								<select id="interest" name="interest">
+									<option>Signature World Escapes</option>
+									<option>Soft Luxury Journeys</option>
+									<option>Family & Reunion Travel</option>
+									<option>Special Travel Support</option>
+								</select>
+							</div>
+							<div>
+								<label for="message">Travel details</label>
+								<textarea
+									id="message"
+									name="message"
+									placeholder="Destination, dates, travelers, and trip style"
+								></textarea>
+							</div>
+							<button type="submit" class="btn btn-primary">
+								Send inquiry
+							</button>
+						</form>
+					</div>
+					<div class="reveal">
+						<div class="contact-card">
+							<span class="eyebrow">Direct</span>
+							<h3
+								style="
+									font-family: var(--font-display);
+									font-size: var(--text-xl);
+									line-height: 1.05;
+									margin-top: 0.5rem;
+								"
+							>
+								Ready for your real details.
+							</h3>
+							<div class="inline-links">
+								<a
+									class="mini-link"
+									href="https://wa.me/10000000000"
+									target="_blank"
+									rel="noopener noreferrer"
+									>WhatsApp</a
+								>
+								<a class="mini-link" href="tel:+10000000000"
+									>Call</a
+								>
+								<a
+									class="mini-link"
+									href="mailto:hello@northwindstravelco.com"
+									>Email</a
+								>
+							</div>
+							<p class="muted" style="margin-top: 1rem">
+								Recommended next swap before launch: real
+								contact details, live domain, analytics ID, and
+								original photography.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
 
-  <div class="sticky-cta" aria-label="Sticky contact prompt">
-    <div>
-      <div class="mini">Northwinds Travel Co.</div>
-      <strong>Start planning</strong>
-    </div>
-    <a href="#contact" class="btn btn-primary">Inquire</a>
-  </div>
+		<div class="sticky-cta" aria-label="Sticky contact prompt">
+			<div>
+				<div class="mini">Northwinds Travel Co.</div>
+				<strong>Start planning</strong>
+			</div>
+			<a href="#contact" class="btn btn-primary">Inquire</a>
+		</div>
 
-  <footer>
-    <div class="container footer-grid">
-      <div>
-        <p class="brand-name">Northwinds Travel Co.</p>
-        <p class="footer-note" style="margin-top:.75rem">Curated journeys, premium planning, and global travel experiences.</p>
-      </div>
-      <div class="footer-note">
-        <p>Launch checklist: add real contact details, connect form delivery, install analytics, and replace temporary images.</p>
-      </div>
-    </div>
-  </footer>
+		<footer>
+			<div class="container footer-grid">
+				<div>
+					<p class="brand-name">Northwinds Travel Co.</p>
+					<p class="footer-note" style="margin-top: 0.75rem">
+						Curated journeys, premium planning, and global travel
+						experiences.
+					</p>
+				</div>
+				<div class="footer-note">
+					<p>
+						Launch checklist: add real contact details, connect form
+						delivery, install analytics, and replace temporary
+						images.
+					</p>
+				</div>
+			</div>
+		</footer>
 
-  <script src="app.js" defer></script>
-</body>
+		<script src="app.js" defer></script>
+	</body>
 </html>

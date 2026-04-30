@@ -316,7 +316,6 @@ p {
 }
 
 .footerNav {
-	background: red;
 	display: flex;
 	justify-content: center;
 	flex-direction: column !important;

@@ -311,14 +311,15 @@ p {
 	align-items: start;
 }
 .footer-grid {
-	grid-template-columns: repeat(4, 1fr);
+	grid-template-columns: repeat(4, 1fr) !important;
 	align-items: start;
 }
 
 .footer-grid .footerNav {
+	background: red;
 	display: flex;
 	justify-content: center;
-	flex-direction: column;
+	flex-direction: column !important;
 }
 .footer-grid .footerNav a {
 	font-size: var(--text-sm);

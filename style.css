@@ -310,8 +310,9 @@ p {
 	grid-template-columns: 1fr 1fr;
 	align-items: start;
 }
-.footer-grid {
-	grid-template-columns: 50%, 50%, 50%, 50%;
+.gridd {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr) !important;
 	align-items: start;
 }
 

@@ -315,20 +315,21 @@ p {
 	align-items: start;
 }
 
-.footer-grid .footerNav {
+.footerNav {
 	background: red;
 	display: flex;
 	justify-content: center;
 	flex-direction: column !important;
 }
-.footer-grid .footerNav a {
+
+.footerNav a {
 	font-size: var(--text-sm);
 	margin: 0.25rem 0;
 	padding: 0rem 0.5rem;
 	font-weight: 300;
 }
-.footer-grid .footerContact a,
-.footer-grid .footerContact p {
+.footerContact a,
+.footerContact p {
 	display: inline-block;
 	font-size: var(--text-sm);
 	margin: 0.25rem 0;

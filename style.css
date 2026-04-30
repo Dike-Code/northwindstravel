@@ -319,7 +319,7 @@ p {
 .footerNav {
 	display: flex;
 	justify-content: center;
-	flex-direction: column !important;
+	flex-direction: column;
 }
 
 .footerNav a {

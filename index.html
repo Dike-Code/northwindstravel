@@ -3,836 +3,226 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Northwinds Travel Co. | Curated Global Journeys</title>
+		<link rel="icon" type="image/png" href="assets/brand/favicon.png" />
+		<script>
+			(function () {
+				try {
+					var t = localStorage.getItem("nw-theme");
+					if (!t) {
+						t =
+							(
+								window.matchMedia &&
+								window.matchMedia(
+									"(prefers-color-scheme: dark)",
+								).matches
+							) ?
+								"dark"
+							:	"light";
+					}
+					document.documentElement.setAttribute("data-theme", t);
+				} catch (e) {}
+			})();
+		</script>
+		<title>
+			Northwinds Travel Co. — A Worldwide Travel Atelier, Rooted in
+			Nairobi
+		</title>
 		<meta
 			name="description"
-			content="Northwinds Travel Co. curates luxury escapes, retreats, family travel, and special travel support across destinations worldwide."
+			content="A worldwide travel atelier rooted in Nairobi. Bespoke journeys, medical recovery travel, heritage and investor trips, and a lifestyle desk for clients who travel often."
 		/>
 		<meta name="theme-color" content="#0f3431" />
 		<meta
 			property="og:title"
-			content="Northwinds Travel Co. | Curated Global Journeys"
+			content="Northwinds Travel Co. — A Worldwide Travel Atelier, Rooted in Nairobi"
 		/>
 		<meta
 			property="og:description"
-			content="Luxury escapes, retreats, family travel, and special travel support across destinations worldwide."
+			content="A worldwide travel atelier rooted in Nairobi. Bespoke journeys, medical recovery travel, heritage and investor trips, and a lifestyle desk for clients who travel often."
 		/>
 		<meta property="og:type" content="website" />
-		<meta
-			property="og:image"
-			content="https://picsum.photos/seed/northwinds-og/1200/630"
-		/>
-		<meta name="twitter:card" content="summary_large_image" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
 			rel="stylesheet"
 		/>
+		<link rel="stylesheet" href="./css/style.css?v=1778780936" />
 		<script type="application/ld+json">
 			{
 				"@context": "https://schema.org",
 				"@type": "TravelAgency",
 				"name": "Northwinds Travel Co.",
-				"description": "Northwinds Travel Co. curates luxury escapes, retreats, family travel, and special travel support across destinations worldwide.",
+				"description": "A worldwide travel atelier rooted in Nairobi. Bespoke journeys, medical recovery travel, heritage and investor trips, and a lifestyle desk for clients who travel often.",
 				"areaServed": "Worldwide",
 				"url": "https://www.northwindstravelco.com",
-				"telephone": "+1-000-000-0000",
-				"email": "hello@northwindstravelco.com"
+				"telephone": "+254142378041",
+				"email": "info@northwindstravel.com"
 			}
 		</script>
-		<style>
-			:root,
-			[data-theme="light"] {
-				--text-xs: clamp(0.75rem, 0.72rem + 0.18vw, 0.875rem);
-				--text-sm: clamp(0.9rem, 0.84rem + 0.16vw, 1rem);
-				--text-base: clamp(1rem, 0.97rem + 0.18vw, 1.125rem);
-				--text-lg: clamp(1.125rem, 1rem + 0.55vw, 1.45rem);
-				--text-xl: clamp(1.5rem, 1.22rem + 1vw, 2.2rem);
-				--text-2xl: clamp(2.3rem, 1.6rem + 2.6vw, 4.5rem);
-				--text-3xl: clamp(3.2rem, 1rem + 5vw, 6.8rem);
-				--space-1: 0.25rem;
-				--space-2: 0.5rem;
-				--space-3: 0.75rem;
-				--space-4: 1rem;
-				--space-5: 1.25rem;
-				--space-6: 1.5rem;
-				--space-8: 2rem;
-				--space-10: 2.5rem;
-				--space-12: 3rem;
-				--space-16: 4rem;
-				--space-20: 5rem;
-				--space-24: 6rem;
-				--color-bg: #f7f4ed;
-				--color-surface: #fbf8f3;
-				--color-surface-2: #fffdfa;
-				--color-surface-offset: #efe6d9;
-				--color-border: #d9c7af;
-				--color-divider: #e0d5c7;
-				--color-text: #1f1814;
-				--color-text-muted: #6d6359;
-				--color-text-faint: #9f9183;
-				--color-text-inverse: #fcf8f3;
-				--color-primary: #0f3431;
-				--color-primary-hover: #0a2624;
-				--color-primary-highlight: #d6e8e4;
-				--color-gold: #bb8d58;
-				--color-gold-soft: #efe1d1;
-				--radius-sm: 0.4rem;
-				--radius-md: 0.8rem;
-				--radius-lg: 1.25rem;
-				--radius-xl: 1.8rem;
-				--radius-full: 999px;
-				--shadow-sm: 0 1px 2px rgba(20, 14, 10, 0.06);
-				--shadow-md: 0 10px 28px rgba(20, 14, 10, 0.1);
-				--shadow-lg: 0 22px 60px rgba(20, 14, 10, 0.16);
-				--content: 1220px;
-				--font-display: "Cormorant Garamond", Georgia, serif;
-				--font-body: "Inter", system-ui, sans-serif;
-				--transition: 200ms cubic-bezier(0.16, 1, 0.3, 1);
-			}
-			[data-theme="dark"] {
-				--color-bg: #12100e;
-				--color-surface: #191613;
-				--color-surface-2: #221d19;
-				--color-surface-offset: #2a2420;
-				--color-border: #473b32;
-				--color-divider: #3a312a;
-				--color-text: #efe6da;
-				--color-text-muted: #c8bbaa;
-				--color-text-faint: #988a7c;
-				--color-text-inverse: #181411;
-				--color-primary: #7eb8b2;
-				--color-primary-hover: #9ad0cb;
-				--color-primary-highlight: #273835;
-				--color-gold: #ddb27a;
-				--color-gold-soft: #443528;
-				--shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.26);
-				--shadow-md: 0 10px 28px rgba(0, 0, 0, 0.32);
-				--shadow-lg: 0 22px 60px rgba(0, 0, 0, 0.44);
-			}
-			*,
-			*::before,
-			*::after {
-				box-sizing: border-box;
-				margin: 0;
-				padding: 0;
-			}
-			html {
-				-webkit-text-size-adjust: none;
-				text-size-adjust: none;
-				scroll-behavior: smooth;
-				scroll-padding-top: 5rem;
-			}
-			body {
-				min-height: 100vh;
-				font-family: var(--font-body);
-				font-size: var(--text-base);
-				line-height: 1.65;
-				background: var(--color-bg);
-				color: var(--color-text);
-			}
-			img,
-			svg {
-				display: block;
-				max-width: 100%;
-				height: auto;
-			}
-			a,
-			button,
-			input,
-			select,
-			textarea {
-				font: inherit;
-				color: inherit;
-			}
-			a {
-				text-decoration: none;
-				color: inherit;
-				transition: all var(--transition);
-			}
-			button {
-				background: none;
-				border: none;
-				cursor: pointer;
-				transition: all var(--transition);
-			}
-			:focus-visible {
-				outline: 2px solid var(--color-primary);
-				outline-offset: 3px;
-				border-radius: var(--radius-sm);
-			}
-			.skip-link {
-				position: absolute;
-				left: -999px;
-				top: 0;
-				background: var(--color-primary);
-				color: var(--color-text-inverse);
-				padding: var(--space-3) var(--space-4);
-				z-index: 1000;
-			}
-			.skip-link:focus {
-				left: var(--space-4);
-				top: var(--space-4);
-			}
-			.container {
-				width: min(calc(100% - 2rem), var(--content));
-				margin-inline: auto;
-			}
-			.section {
-				padding-block: clamp(var(--space-12), 8vw, var(--space-24));
-			}
-			.eyebrow {
-				display: inline-flex;
-				align-items: center;
-				gap: 0.6rem;
-				font-size: var(--text-xs);
-				letter-spacing: 0.18em;
-				text-transform: uppercase;
-				font-weight: 800;
-				color: var(--color-text-muted);
-			}
-			.eyebrow::before {
-				content: "";
-				width: 1.5rem;
-				height: 1px;
-				background: currentColor;
-				opacity: 0.55;
-			}
-			h1,
-			h2 {
-				font-family: var(--font-display);
-				font-weight: 600;
-				line-height: 0.92;
-				letter-spacing: -0.03em;
-				font-size: var(--text-3xl);
-			}
-			h2 {
-				font-size: var(--text-2xl);
-				margin: 0.45rem 0 1rem;
-			}
-			h3 {
-				font-size: var(--text-lg);
-				line-height: 1.18;
-			}
-			p {
-				max-width: 70ch;
-			}
-			.muted {
-				color: var(--color-text-muted);
-			}
-			.site-header {
-				position: sticky;
-				top: 0;
-				z-index: 60;
-				background: color-mix(
-					in srgb,
-					var(--color-bg) 84%,
-					transparent
-				);
-				backdrop-filter: blur(18px);
-				border-bottom: 1px solid
-					color-mix(in srgb, var(--color-text) 10%, transparent);
-			}
-			.header-row {
-				display: flex;
-				align-items: center;
-				justify-content: space-between;
-				gap: var(--space-4);
-				padding: var(--space-4) 0;
-			}
-			.brand {
-				display: flex;
-				align-items: center;
-				gap: var(--space-3);
-			}
-			.brand-mark {
-				width: 4rem;
-				height: 4rem;
-				border-radius: 50%;
-				display: grid;
-				place-items: center;
-				overflow: hidden;
-				background: var(--color-primary);
-				box-shadow: var(--shadow-sm);
-			}
-			.brand-name {
-				font-family: var(--font-display);
-				font-size: 1.5rem;
-				line-height: 1;
-			}
-			.brand-sub {
-				display: block;
-				font-size: var(--text-xs);
-				letter-spacing: 0.14em;
-				text-transform: uppercase;
-				color: var(--color-text-muted);
-				margin-top: 0.15rem;
-			}
-			.nav {
-				display: flex;
-				align-items: center;
-				gap: var(--space-5);
-			}
-			.nav a {
-				font-size: var(--text-sm);
-				color: var(--color-text-muted);
-			}
-			.nav a:hover {
-				color: var(--color-text);
-			}
-			.header-actions {
-				display: flex;
-				align-items: center;
-				gap: 0.75rem;
-			}
-			.icon-btn {
-				width: 44px;
-				height: 44px;
-				border-radius: 50%;
-				display: grid;
-				place-items: center;
-				background: var(--color-surface);
-				border: 1px solid
-					color-mix(in srgb, var(--color-text) 10%, transparent);
-			}
-			.menu-toggle {
-				display: none;
-			}
-			.hero {
-				position: relative;
-				min-height: 100vh;
-				display: flex;
-				align-items: center;
-				padding: var(--space-16) 0;
-				background:
-					linear-gradient(
-						180deg,
-						rgba(0, 0, 0, 0.12),
-						rgba(0, 0, 0, 0.26)
-					),
-					url("https://picsum.photos/seed/northwinds-final-hero/1800/1400")
-						center/cover no-repeat;
-				color: #fff;
-			}
-			.hero::after {
-				content: "";
-				position: absolute;
-				inset: 0;
-				background: linear-gradient(
-					90deg,
-					rgba(6, 17, 16, 0.74) 0%,
-					rgba(6, 17, 16, 0.42) 45%,
-					rgba(6, 17, 16, 0.12) 100%
-				);
-			}
-			.hero .container {
-				position: relative;
-				z-index: 2;
-			}
-			.hero-grid,
-			.package-grid,
-			.feature-grid,
-			.process,
-			.faq-grid,
-			.footer-grid {
-				display: grid;
-				gap: var(--space-5);
-			}
-			.hero-grid {
-				grid-template-columns: 1.08fr 0.92fr;
-				align-items: end;
-			}
-			.package-grid {
-				grid-template-columns: repeat(4, 1fr);
-				margin-top: 2rem;
-			}
-			.feature-grid {
-				grid-template-columns: repeat(3, 1fr);
-				margin-top: 2rem;
-			}
-			.process {
-				grid-template-columns: repeat(4, 1fr);
-				margin-top: 2rem;
-			}
-			.faq-grid {
-				grid-template-columns: 1fr 1fr;
-				align-items: start;
-			}
-			.footer-grid {
-				grid-template-columns: 2fr 1.5fr 1fr 1.5fr;
-				align-items: start;
-			}
-
-			.footer-grid .footerNav {
-				display: flex;
-				flex-direction: column;
-				gap: var(--space-3);
-			}
-
-			.footer-grid .footerNav a {
-				color: var(--color-text-muted);
-				font-size: var(--text-sm);
-			}
-
-			.footer-grid .footerContact a,
-			.footer-grid .footerContact p {
-				display: inline-flex;
-				color: var(--color-text-muted);
-				font-size: var(--text-sm);
-			}
-
-			.footer .hero-copy h1 {
-				font-size: var(--text-3xl);
-				max-width: 10.8ch;
-				margin: 0.8rem 0 1rem;
-			}
-			.hero-copy p {
-				font-size: var(--text-lg);
-				max-width: 50ch;
-				color: rgba(255, 255, 255, 0.86);
-			}
-			.hero-actions {
-				display: flex;
-				flex-wrap: wrap;
-				gap: var(--space-4);
-				margin-top: var(--space-6);
-			}
-			.btn {
-				display: inline-flex;
-				align-items: center;
-				justify-content: center;
-				min-height: 50px;
-				padding: 0 1.35rem;
-				border-radius: var(--radius-full);
-				font-size: var(--text-sm);
-				font-weight: 800;
-			}
-			.btn-primary {
-				background: var(--color-gold);
-				color: #1e1813;
-				box-shadow: var(--shadow-md);
-			}
-			.btn-primary:hover {
-				transform: translateY(-1px);
-				filter: brightness(1.03);
-			}
-			.btn-secondary {
-				background: rgba(255, 255, 255, 0.08);
-				color: #fff;
-				border: 1px solid rgba(255, 255, 255, 0.24);
-			}
-			.hero-card,
-			.package-card,
-			.feature-card,
-			.step,
-			.faq-item,
-			.contact-card,
-			.trust-card {
-				background: var(--color-surface);
-				border: 1px solid
-					color-mix(in srgb, var(--color-text) 9%, transparent);
-				border-radius: var(--radius-xl);
-				box-shadow: var(--shadow-sm);
-			}
-			.hero-card {
-				justify-self: end;
-				width: min(100%, 430px);
-				padding: var(--space-6);
-				background: rgba(255, 255, 255, 0.1);
-				border: 1px solid rgba(255, 255, 255, 0.18);
-				backdrop-filter: blur(16px);
-				box-shadow: var(--shadow-lg);
-			}
-			.hero-card p {
-				color: rgba(255, 255, 255, 0.78);
-			}
-			.trust-band {
-				background: var(--color-primary);
-				color: var(--color-text-inverse);
-				padding: var(--space-4) 0;
-			}
-			.trust-row {
-				display: grid;
-				grid-template-columns: repeat(4, 1fr);
-				gap: var(--space-4);
-			}
-			.trust-row div {
-				padding: 0 var(--space-4);
-				border-left: 1px solid rgba(255, 255, 255, 0.14);
-			}
-			.trust-row div:first-child {
-				border-left: none;
-				padding-left: 0;
-			}
-			.section-split {
-				display: grid;
-				grid-template-columns: 0.9fr 1.1fr;
-				gap: var(--space-10);
-				align-items: start;
-			}
-			.package-card,
-			.feature-card,
-			.step,
-			.faq-item,
-			.contact-card,
-			.trust-card {
-				padding: var(--space-6);
-			}
-			.package-card.highlight {
-				background: linear-gradient(
-					180deg,
-					color-mix(
-						in srgb,
-						var(--color-primary-highlight) 34%,
-						var(--color-surface-2)
-					),
-					var(--color-surface)
-				);
-				transform: translateY(-10px);
-			}
-			.badge {
-				display: inline-flex;
-				align-items: center;
-				padding: 0.45rem 0.75rem;
-				border-radius: var(--radius-full);
-				font-size: var(--text-xs);
-				font-weight: 800;
-				letter-spacing: 0.08em;
-				text-transform: uppercase;
-				background: var(--color-surface-offset);
-				color: var(--color-text-muted);
-			}
-			.check-list {
-				list-style: none;
-				display: grid;
-				gap: var(--space-3);
-				margin-top: 1rem;
-			}
-			.check-list li {
-				position: relative;
-				padding-left: 1.35rem;
-				color: var(--color-text-muted);
-			}
-			.check-list li::before {
-				content: "•";
-				position: absolute;
-				left: 0;
-				top: 0;
-				color: var(--color-gold);
-				font-weight: 900;
-			}
-			.feature-icon {
-				width: 3rem;
-				height: 3rem;
-				border-radius: 50%;
-				display: grid;
-				place-items: center;
-				background: var(--color-gold-soft);
-				color: var(--color-gold);
-				margin-bottom: var(--space-3);
-			}
-			.proof-row {
-				display: grid;
-				grid-template-columns: repeat(3, 1fr);
-				gap: var(--space-5);
-				margin-top: 2rem;
-			}
-			.trust-card strong {
-				display: block;
-				font-family: var(--font-display);
-				font-size: var(--text-xl);
-				margin: 0.35rem 0;
-			}
-			.quote-band {
-				padding: var(--space-8);
-				background: linear-gradient(
-					135deg,
-					var(--color-primary),
-					#1e4454
-				);
-				border-radius: var(--radius-xl);
-				color: var(--color-text-inverse);
-				box-shadow: var(--shadow-lg);
-			}
-			.quote-band p {
-				font-family: var(--font-display);
-				font-size: var(--text-xl);
-				max-width: 20ch;
-				line-height: 1.05;
-			}
-			.faq-item summary {
-				cursor: pointer;
-				font-weight: 700;
-				list-style: none;
-			}
-			.faq-item summary::-webkit-details-marker {
-				display: none;
-			}
-			.faq-item p {
-				margin-top: 0.8rem;
-				color: var(--color-text-muted);
-			}
-			.contact-wrap {
-				display: grid;
-				grid-template-columns: 1fr 0.85fr;
-				gap: var(--space-6);
-			}
-			.form-grid {
-				display: grid;
-				gap: var(--space-4);
-				margin-top: var(--space-5);
-			}
-			label {
-				font-size: var(--text-sm);
-				font-weight: 700;
-			}
-			input,
-			select,
-			textarea {
-				width: 100%;
-				min-height: 50px;
-				padding: 0 var(--space-4);
-				border-radius: var(--radius-md);
-				border: 1px solid
-					color-mix(in srgb, var(--color-text) 12%, transparent);
-				background: var(--color-surface-2);
-			}
-			textarea {
-				min-height: 130px;
-				padding-block: var(--space-4);
-				resize: vertical;
-			}
-			.inline-links {
-				display: flex;
-				flex-wrap: wrap;
-				gap: var(--space-3);
-				margin-top: var(--space-4);
-			}
-			.mini-link {
-				display: inline-flex;
-				align-items: center;
-				gap: 0.45rem;
-				padding: 0.75rem 1rem;
-				border-radius: var(--radius-full);
-				background: var(--color-surface-offset);
-				font-size: var(--text-sm);
-				font-weight: 700;
-			}
-			.sticky-cta {
-				position: fixed;
-				right: 5%;
-				bottom: 1rem;
-				transform: translateX(-50%);
-				z-index: 70;
-				display: flex;
-				align-items: center;
-				gap: 0.75rem;
-				padding: 0.7rem 0.85rem;
-				background: color-mix(
-					in srgb,
-					var(--color-primary) 92%,
-					transparent
-				);
-				color: var(--color-text-inverse);
-				border-radius: var(--radius-full);
-				box-shadow: var(--shadow-lg);
-				border: 1px solid rgba(255, 255, 255, 0.12);
-			}
-			.sticky-cta .mini {
-				font-size: var(--text-xs);
-				opacity: 0.86;
-				text-transform: uppercase;
-				letter-spacing: 0.08em;
-			}
-			footer {
-				padding: var(--space-10) 0;
-				border-top: 1px solid
-					color-mix(in srgb, var(--color-text) 10%, transparent);
-			}
-			.footer-note {
-				color: var(--color-text-muted);
-				font-size: var(--text-sm);
-			}
-			.services-grid {
-				display: grid;
-				grid-template-columns: repeat(3, 1fr);
-				gap: var(--space-6);
-				margin-top: 2rem;
-			}
-			.service-card {
-				background: var(--color-surface);
-				border: 1px solid
-					color-mix(in srgb, var(--color-text) 9%, transparent);
-				border-radius: var(--radius-xl);
-				box-shadow: var(--shadow-sm);
-				padding: var(--space-6);
-				display: grid;
-				gap: var(--space-2);
-				align-content: start;
-			}
-			.service-icon {
-				width: 3.2rem;
-				height: 3.2rem;
-				border-radius: 50%;
-				display: grid;
-				place-items: center;
-				background: var(--color-primary-highlight);
-				color: var(--color-primary);
-				margin-bottom: 0.5rem;
-			}
-			.reveal {
-				opacity: 0;
-				transform: translateY(18px);
-				transition:
-					opacity 0.8s ease,
-					transform 0.8s ease;
-			}
-			.reveal.visible {
-				opacity: 1;
-				transform: none;
-			}
-			@media (max-width: 1100px) {
-				.hero {
-					min-height: auto;
-					padding-top: 7rem;
-				}
-				.hero-grid,
-				.package-grid,
-				.feature-grid,
-				.process,
-				.section-split,
-				.proof-row,
-				.faq-grid,
-				.contact-wrap,
-				.footer-grid,
-				.trust-row,
-				.services-grid {
-					grid-template-columns: 1fr;
-				}
-				.hero-card {
-					justify-self: stretch;
-					width: 100%;
-				}
-				.package-card.highlight {
-					transform: none;
-				}
-				.trust-row div {
-					border-left: none;
-					border-top: 1px solid rgba(255, 255, 255, 0.14);
-					padding: var(--space-4) 0 0;
-				}
-				.trust-row div:first-child {
-					border-top: none;
-					padding-top: 0;
-				}
-			}
-			@media (max-width: 900px) {
-				.nav {
-					display: none;
-					position: fixed;
-					left: 1rem;
-					right: 1rem;
-					top: 78px;
-					flex-direction: column;
-					align-items: flex-start;
-					padding: var(--space-5);
-					background: var(--color-surface);
-					border-radius: var(--radius-xl);
-					border: 1px solid
-						color-mix(in srgb, var(--color-text) 10%, transparent);
-					box-shadow: var(--shadow-lg);
-				}
-				.nav.open {
-					display: flex;
-				}
-				.menu-toggle {
-					display: grid;
-				}
-			}
-			@media (max-width: 640px) {
-				.container {
-					width: min(calc(100% - 1.25rem), var(--content));
-				}
-				.hero-copy h1 {
-					max-width: 12ch;
-				}
-				.hero-actions {
-					flex-direction: column;
-					align-items: stretch;
-				}
-				.btn {
-					width: 100%;
-				}
-				.sticky-cta {
-					left: 0.75rem;
-					right: 0.75rem;
-					transform: none;
-					justify-content: space-between;
-				}
-			}
-			@media (prefers-reduced-motion: reduce) {
-				html {
-					scroll-behavior: auto;
-				}
-				.reveal {
-					opacity: 1;
-					transform: none;
-					transition: none;
-				}
-			}
-		</style>
+		<!-- Favicons -->
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="assets/brand/favicon-32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="assets/brand/favicon-16.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="assets/brand/favicon-180.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="192x192"
+			href="assets/brand/favicon-192.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="512x512"
+			href="assets/brand/favicon-512.png"
+		/>
+		<!-- Open Graph -->
+		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content="Northwinds Travel Co." />
+		<meta
+			property="og:title"
+			content="Northwinds Travel Co. — A Worldwide Travel Atelier, Rooted in Nairobi"
+		/>
+		<meta
+			property="og:description"
+			content="A worldwide travel atelier rooted in Nairobi. Bespoke journeys, medical recovery travel, heritage and investor trips, and a lifestyle desk for clients who travel often."
+		/>
+		<meta property="og:url" content="https://www.northwindstravel.com/" />
+		<meta
+			property="og:image"
+			content="https://www.northwindstravel.com/assets/og/og-default.png"
+		/>
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+		<!-- Twitter -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta
+			name="twitter:title"
+			content="Northwinds Travel Co. — A Worldwide Travel Atelier, Rooted in Nairobi"
+		/>
+		<meta
+			name="twitter:description"
+			content="A worldwide travel atelier rooted in Nairobi. Bespoke journeys, medical recovery travel, heritage and investor trips, and a lifestyle desk for clients who travel often."
+		/>
+		<meta
+			name="twitter:image"
+			content="https://www.northwindstravel.com/assets/og/og-default.png"
+		/>
+		<!-- Canonical -->
+		<link rel="canonical" href="https://www.northwindstravel.com/" />
 	</head>
 	<body>
-		<a href="#main" class="skip-link">Skip to content</a>
+		<a
+			href="#main"
+			class="skip-link"
+			style="position: absolute; left: -999px"
+			>Skip to content</a
+		>
+
+		<div class="top-ribbon">
+			<div class="container ribbon-announce">
+				<a class="ribbon-announce-link" href="./pages/contact.html"
+					><svg
+						class="ribbon-leaf"
+						width="13"
+						height="13"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="1.8"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						aria-hidden="true"
+					>
+						<path
+							d="M7 20c0-9 7-13 14-13-1 8-5 13-13 13-1 0-1 0-1 0z"
+						/>
+						<path d="M7 20c2-5 6-8 11-9" />
+					</svg>
+					<span class="ribbon-text"
+						>Now welcoming new travelers</span
+					></a
+				>
+			</div>
+		</div>
+
 		<header class="site-header">
 			<div class="container header-row">
 				<a
-					href="#top"
+					href="./index.html"
 					class="brand"
 					aria-label="Northwinds Travel Co. home"
 				>
-					<span class="brand-mark" aria-hidden="true">
-						<img
-							src="logo.jpg"
-							alt="Northwinds Travel Co."
-							style="
-								width: 100%;
-								height: 100%;
-								object-fit: cover;
-								border-radius: 50%;
-							"
-						/>
-					</span>
+					<span class="brand-mark" aria-hidden="true"
+						><img src="assets/brand/northwinds-mark.png" alt=""
+					/></span>
 					<span>
 						<span class="brand-name">Northwinds Travel Co.</span>
-						<span class="brand-sub">Curated global journeys</span>
+						<span class="brand-sub">Curated Global Journeys</span>
 					</span>
 				</a>
 				<nav class="nav" id="nav" aria-label="Primary navigation">
-					<a href="#packages">Packages</a>
-					<a href="#services">Services</a>
-					<a href="#why-us">Why Us</a>
-					<a href="#process">How It Works</a>
-					<a href="#faq">FAQ</a>
-					<a href="#contact">Contact</a>
+					<a href="./index.html" class="active">Home</a>
+					<a href="./pages/about.html">About Us</a>
+					<a href="./pages/services.html">Journeys</a>
+					<a href="./pages/destinations.html">Destinations</a>
+					<a href="./pages/blog.html">Blog</a>
+					<a href="./pages/contact.html">Contact</a>
 				</nav>
 				<div class="header-actions">
+					<a
+						class="btn btn-forest"
+						href="./pages/contact.html"
+						style="min-height: 44px; padding: 0 1.1rem"
+						>Plan a Journey</a
+					>
 					<button
-						class="icon-btn"
-						data-theme-toggle
-						aria-label="Switch theme"
+						class="theme-toggle"
+						id="themeToggle"
+						aria-label="Toggle day / night mode"
+						type="button"
 					>
 						<svg
-							width="20"
-							height="20"
+							class="icon-moon"
 							viewBox="0 0 24 24"
 							fill="none"
 							stroke="currentColor"
-							stroke-width="2"
+							stroke-width="1.8"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							aria-hidden="true"
 						>
 							<path
 								d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"
+							/>
+						</svg>
+						<svg
+							class="icon-sun"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="1.8"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							aria-hidden="true"
+						>
+							<circle cx="12" cy="12" r="4" />
+							<path
+								d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"
 							/>
 						</svg>
 					</button>
@@ -859,721 +249,939 @@
 		</header>
 
 		<main id="main">
+			<!-- HERO -->
 			<section class="hero" id="top">
-				<div class="container hero-grid">
+				<div class="container hero-grid hero-grid-solo">
 					<div class="hero-copy reveal visible">
-						<span
-							class="eyebrow"
-							style="color: rgba(255, 255, 255, 0.8)"
-							>Luxury escapes • retreats • corporate travel • visa
-							support • worldwide</span
+						<span class="eyebrow on-dark gold"
+							>Nairobi · Worldwide · Since the first horizon</span
 						>
-						<h1>
-							Curated journeys with beauty, ease, and intention.
-						</h1>
-						<p>
-							Luxury escapes, restorative retreats, family travel,
-							and high-touch planning across destinations
-							worldwide.
+						<h1>The world, beautifully planned.</h1>
+						<p class="lede">
+							From private safari camps to weekend escapes in
+							Lisbon, multi-city family reunions to last-minute
+							boardings — Northwinds designs travel with the
+							precision, taste, and quiet confidence of a
+							worldwide travel atelier.
 						</p>
 						<div class="hero-actions">
-							<a class="btn btn-primary" href="#contact"
-								>Start planning</a
+							<a
+								class="btn btn-primary"
+								href="./pages/contact.html"
+								>Plan a Journey</a
 							>
-							<a class="btn btn-secondary" href="#packages"
-								>View packages</a
+							<a
+								class="btn btn-ghost-light"
+								href="./pages/destinations.html"
+								>Explore Destinations</a
 							>
 						</div>
 					</div>
-					<aside
-						class="hero-card reveal"
-						aria-label="Quick contact card"
-					>
-						<span
-							class="eyebrow"
-							style="color: rgba(255, 255, 255, 0.76)"
-							>Private planning</span
-						>
-						<h3
-							style="
-								font-family: var(--font-display);
-								font-size: var(--text-xl);
-								line-height: 1.05;
-								margin-top: 0.5rem;
-							"
-						>
-							We respond within 24 hours.
-						</h3>
-						<p style="margin-top: 0.8rem">
-							Reach us directly by phone, WhatsApp, or email —
-							whichever feels easiest for you.
-						</p>
-						<div class="inline-links">
-							<a
-								class="mini-link"
-								href="https://wa.me/19725550100"
-								target="_blank"
-								rel="noopener noreferrer"
-								>WhatsApp</a
-							>
-							<a class="mini-link" href="tel:+19725550100"
-								>Call</a
-							>
-							<a
-								class="mini-link"
-								href="mailto:hello@northwindstravelco.com"
-								>Email</a
-							>
-						</div>
-					</aside>
 				</div>
 			</section>
 
-			<section class="trust-band">
-				<div class="container trust-row">
-					<div>
-						<strong>Global reach</strong><br />Destinations across
-						Africa, Europe, the Caribbean, and beyond
-					</div>
-					<div>
-						<strong>Corporate travel</strong><br />Executive, group,
-						and business trip management
-					</div>
-					<div>
-						<strong>Medical journeys</strong><br />Compassionate
-						planning for health and treatment travel
-					</div>
-					<div>
-						<strong>Visa support</strong><br />Guidance and document
-						prep for smooth applications
-					</div>
-				</div>
-			</section>
-
-			<section class="section" id="packages">
-				<div class="container">
-					<span class="eyebrow reveal">Our packages</span>
-					<h2 class="reveal">
-						Every kind of journey, expertly planned.
-					</h2>
-					<div class="package-grid">
-						<article class="package-card reveal">
-							<span class="badge">Luxury</span>
-							<h3 style="margin-top: 1rem">
-								Signature World Escapes
-							</h3>
-							<ul class="check-list">
-								<li>Custom itineraries</li>
-								<li>Premium stays</li>
-								<li>Celebration travel</li>
-							</ul>
-						</article>
-						<article class="package-card highlight reveal">
-							<span class="badge">Retreats</span>
-							<h3 style="margin-top: 1rem">
-								Soft Luxury Journeys
-							</h3>
-							<ul class="check-list">
-								<li>Restorative getaways</li>
-								<li>Mother retreats</li>
-								<li>Wellness pacing</li>
-							</ul>
-						</article>
-						<article class="package-card reveal">
-							<span class="badge">Family</span>
-							<h3 style="margin-top: 1rem">
-								Family & Reunion Travel
-							</h3>
-							<ul class="check-list">
-								<li>Multi-traveler coordination</li>
-								<li>Comfort-focused planning</li>
-								<li>International family travel</li>
-							</ul>
-						</article>
-						<article class="package-card reveal">
-							<span class="badge">Support</span>
-							<h3 style="margin-top: 1rem">
-								Special Travel Support
-							</h3>
-							<ul class="check-list">
-								<li>Complex trip planning</li>
-								<li>Calm logistics support</li>
-								<li>Private coordination</li>
-							</ul>
-						</article>
-					</div>
-				</div>
-			</section>
-
-			<section class="section" id="services">
-				<div class="container">
-					<span class="eyebrow reveal">Specialized services</span>
-					<h2 class="reveal">
-						Beyond the trip — full support from start to finish.
-					</h2>
-					<p class="muted reveal" style="margin-bottom: 2.5rem">
-						We go further than itinerary planning. Whether you need
-						a visa secured, a medical journey coordinated, or
-						corporate travel managed at scale, we handle it with the
-						same personal attention as every other journey we plan.
-					</p>
-					<div class="services-grid">
-						<article class="service-card reveal">
-							<div class="service-icon" aria-hidden="true">
-								<svg
-									width="22"
-									height="22"
-									viewBox="0 0 24 24"
-									fill="none"
-									stroke="currentColor"
-									stroke-width="2"
-								>
-									<path
-										d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2z"
-									/>
-									<path d="M12 8v4l3 3" />
-								</svg>
-							</div>
-							<span class="badge" style="margin-bottom: 0.75rem"
-								>Medical Travel</span
-							>
-							<h3>Medical & Health Journey Planning</h3>
-							<p class="muted" style="margin-top: 0.75rem">
-								For clients traveling for medical treatment,
-								surgery, recovery, or specialist consultations
-								abroad. We coordinate every detail with
-								compassion and precision.
-							</p>
-							<ul class="check-list">
-								<li>
-									International hospital and clinic
-									coordination
-								</li>
-								<li>
-									Companion and escort travel arrangements
-								</li>
-								<li>Accommodation near treatment facilities</li>
-								<li>
-									Ground transportation and recovery logistics
-								</li>
-								<li>
-									Flexible rebooking and contingency planning
-								</li>
-							</ul>
-						</article>
-
-						<article class="service-card reveal">
-							<div class="service-icon" aria-hidden="true">
-								<svg
-									width="22"
-									height="22"
-									viewBox="0 0 24 24"
-									fill="none"
-									stroke="currentColor"
-									stroke-width="2"
-								>
-									<rect
-										x="2"
-										y="7"
-										width="20"
-										height="14"
-										rx="2"
-									/>
-									<path
-										d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"
-									/>
-									<line x1="12" y1="12" x2="12" y2="16" />
-									<line x1="10" y1="14" x2="14" y2="14" />
-								</svg>
-							</div>
-							<span class="badge" style="margin-bottom: 0.75rem"
-								>Corporate</span
-							>
-							<h3>Corporate & Business Travel</h3>
-							<p class="muted" style="margin-top: 0.75rem">
-								Streamlined travel management for companies,
-								executives, and professional teams. We handle
-								the logistics so your team stays focused on the
-								work.
-							</p>
-							<ul class="check-list">
-								<li>
-									Multi-leg and multi-city business
-									itineraries
-								</li>
-								<li>Executive and VIP travel arrangements</li>
-								<li>
-									Group bookings for conferences and retreats
-								</li>
-								<li>
-									Dedicated account management and fast
-									rebooking
-								</li>
-								<li>
-									Preferred rates and corporate billing
-									options
-								</li>
-							</ul>
-						</article>
-
-						<article class="service-card reveal">
-							<div class="service-icon" aria-hidden="true">
-								<svg
-									width="22"
-									height="22"
-									viewBox="0 0 24 24"
-									fill="none"
-									stroke="currentColor"
-									stroke-width="2"
-								>
-									<path
-										d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
-									/>
-									<polyline points="14 2 14 8 20 8" />
-									<line x1="9" y1="13" x2="15" y2="13" />
-									<line x1="9" y1="17" x2="12" y2="17" />
-								</svg>
-							</div>
-							<span class="badge" style="margin-bottom: 0.75rem"
-								>Visa Support</span
-							>
-							<h3>Visa Assistance & Application Support</h3>
-							<p class="muted" style="margin-top: 0.75rem">
-								Navigating visa requirements can be stressful
-								and time-consuming. We guide you through the
-								process clearly, helping you prepare the right
-								documents for a smooth application.
-							</p>
-							<ul class="check-list">
-								<li>
-									Country-specific visa requirement guidance
-								</li>
-								<li>
-									Document checklist preparation and review
-								</li>
-								<li>
-									Tourist, business, and medical visa support
-								</li>
-								<li>
-									Application timeline planning and follow-up
-								</li>
-								<li>
-									Support for US, Kenya, Schengen, UK, and
-									more
-								</li>
-							</ul>
-						</article>
-					</div>
-				</div>
-			</section>
-
-			<section class="section" id="why-us">
-				<div class="container section-split">
-					<div class="reveal">
-						<span class="eyebrow">Why Northwinds</span>
-						<h2>
-							We plan the kind of travel people talk about for
-							years.
-						</h2>
-						<p class="muted">
-							We combine deep destination knowledge with a
-							high-touch personal service that guides you from the
-							first idea to the final boarding pass.
-						</p>
-					</div>
-					<div class="feature-grid reveal">
-						<article class="feature-card">
-							<div class="feature-icon" aria-hidden="true">
-								<svg
-									width="18"
-									height="18"
-									viewBox="0 0 24 24"
-									fill="none"
-									stroke="currentColor"
-									stroke-width="2"
-								>
-									<path
-										d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.77 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z"
-									/>
-								</svg>
-							</div>
-							<h3>Personal attention</h3>
-							<p class="muted">
-								Every journey is handled with care — no call
-								centers, no generic packages, just focused
-								planning built around you.
-							</p>
-						</article>
-						<article class="feature-card">
-							<div class="feature-icon" aria-hidden="true">
-								<svg
-									width="18"
-									height="18"
-									viewBox="0 0 24 24"
-									fill="none"
-									stroke="currentColor"
-									stroke-width="2"
-								>
-									<path d="M3 12h18M3 6h18M3 18h18" />
-								</svg>
-							</div>
-							<h3>Global connections</h3>
-							<p class="muted">
-								Access to handpicked partners, premium hotels,
-								and on-the-ground support in destinations around
-								the world.
-							</p>
-						</article>
-						<article class="feature-card">
-							<div class="feature-icon" aria-hidden="true">
-								<svg
-									width="18"
-									height="18"
-									viewBox="0 0 24 24"
-									fill="none"
-									stroke="currentColor"
-									stroke-width="2"
-								>
-									<path d="M12 20V10M18 20V4M6 20v-4" />
-								</svg>
-							</div>
-							<h3>No detail overlooked</h3>
-							<p class="muted">
-								From airport transfers to special occasions and
-								dietary preferences — we think ahead so you can
-								simply enjoy the trip.
-							</p>
-						</article>
-					</div>
-				</div>
-			</section>
-
-			<section class="section" id="process">
-				<div class="container">
-					<span class="eyebrow reveal">How it works</span>
-					<h2 class="reveal">
-						From first conversation to perfect departure.
-					</h2>
-					<div class="process">
-						<article class="step reveal">
-							<span class="eyebrow">01</span>
-							<h3 style="margin-top: 0.75rem">
-								Share the vision
-							</h3>
-							<p class="muted" style="margin-top: 0.6rem">
-								Tell us where you want to go and how you want to
-								travel.
-							</p>
-						</article>
-						<article class="step reveal">
-							<span class="eyebrow">02</span>
-							<h3 style="margin-top: 0.75rem">
-								Receive direction
-							</h3>
-							<p class="muted" style="margin-top: 0.6rem">
-								We shape the right route, style, and pace for
-								the trip.
-							</p>
-						</article>
-						<article class="step reveal">
-							<span class="eyebrow">03</span>
-							<h3 style="margin-top: 0.75rem">
-								Refine the details
-							</h3>
-							<p class="muted" style="margin-top: 0.6rem">
-								We finalize logistics, preferences, and premium
-								touches.
-							</p>
-						</article>
-						<article class="step reveal">
-							<span class="eyebrow">04</span>
-							<h3 style="margin-top: 0.75rem">Travel well</h3>
-							<p class="muted" style="margin-top: 0.6rem">
-								Your journey is designed to feel seamless and
-								elevated.
-							</p>
-						</article>
-					</div>
-				</div>
-			</section>
-
+			<!-- JOURNEYS WE CREATE — the actual products, surfaced first -->
 			<section class="section">
 				<div class="container">
-					<div class="quote-band reveal">
-						<p>
-							The world is extraordinary. We make sure getting
-							there feels the same way.
+					<div style="max-width: 760px">
+						<span class="eyebrow reveal">Journeys we create</span>
+						<h2 class="reveal">
+							Eight ways to travel with Northwinds.
+						</h2>
+						<p class="lede reveal">
+							Every journey we plan begins with one of these
+							starting points. Choose where you are, and we'll
+							route the rest.
 						</p>
 					</div>
-				</div>
-			</section>
 
-			<section class="section" id="faq">
-				<div class="container faq-grid">
-					<div class="reveal">
-						<span class="eyebrow">FAQ</span>
-						<h2>Common questions, honest answers.</h2>
-					</div>
-					<div class="reveal">
-						<details class="faq-item" open>
-							<summary>
-								Do I need to know exactly where I want to go?
-							</summary>
-							<p>
-								Not at all. Many of our best journeys start with
-								a feeling — a mood, a milestone, or a
-								destination you have always imagined. Share what
-								you have in mind and we will shape the rest.
-							</p>
-						</details>
-						<details class="faq-item" style="margin-top: 1rem">
-							<summary>
-								How far in advance should I reach out?
-							</summary>
-							<p>
-								For most trips, four to eight weeks ahead is
-								ideal. For larger group travel or more complex
-								journeys, three to six months gives us the best
-								options. That said, we have pulled together
-								exceptional last-minute trips too.
-							</p>
-						</details>
-						<details class="faq-item" style="margin-top: 1rem">
-							<summary>
-								Do you work with international destinations?
-							</summary>
-							<p>
-								Yes. We plan travel across Africa, Europe, the
-								Caribbean, and beyond. Whether you are returning
-								home, exploring for the first time, or
-								coordinating family travel across continents, we
-								are experienced in exactly that.
-							</p>
-						</details>
-					</div>
-				</div>
-			</section>
-
-			<section class="section" id="contact">
-				<div class="container contact-wrap">
-					<div class="contact-card reveal">
-						<span class="eyebrow">Contact</span>
-						<h2>Start the conversation.</h2>
-						<p class="muted">
-							Tell us where you want to go and we will take it
-							from there. We respond to every inquiry personally,
-							usually within 24 hours.
-						</p>
-						<form
-							class="form-grid"
-							name="northwinds-inquiry"
-							method="post"
-							data-netlify="true"
+					<div class="journeys-grid">
+						<a
+							class="journey-card reveal"
+							href="./pages/services/bespoke.html"
 						>
-							<input
-								type="hidden"
-								name="form-name"
-								value="northwinds-inquiry"
-							/>
-							<div>
-								<label for="name">Full name</label>
-								<input
-									id="name"
-									name="name"
-									type="text"
-									placeholder="Your name"
-									required
-								/>
-							</div>
-							<div>
-								<label for="email">Email</label>
-								<input
-									id="email"
-									name="email"
-									type="email"
-									placeholder="you@example.com"
-									required
-								/>
-							</div>
-							<div>
-								<label for="interest">Travel type</label>
-								<select id="interest" name="interest">
-									<option>Signature World Escapes</option>
-									<option>Soft Luxury Journeys</option>
-									<option>Family & Reunion Travel</option>
-									<option>Special Travel Support</option>
-									<option>Medical Travel</option>
-									<option>Corporate & Business Travel</option>
-									<option>Visa Assistance</option>
-								</select>
-							</div>
-							<div>
-								<label for="message">Travel details</label>
-								<textarea
-									id="message"
-									name="message"
-									placeholder="Destination, dates, travelers, and trip style"
-								></textarea>
-							</div>
-							<button type="submit" class="btn btn-primary">
-								Send inquiry
-							</button>
-						</form>
-					</div>
-					<div class="reveal">
-						<div class="contact-card">
-							<span class="eyebrow">Reach us directly</span>
-							<h3
+							<div
+								class="journey-image"
 								style="
-									font-family: var(--font-display);
-									font-size: var(--text-xl);
-									line-height: 1.05;
-									margin-top: 0.5rem;
+									background-image: url(&quot;./assets/photos/svc-bespoke.png&quot;);
 								"
-							>
-								Prefer to reach us directly?
-							</h3>
-							<div class="inline-links">
-								<a
-									class="mini-link"
-									href="https://wa.me/19725550100"
-									target="_blank"
-									rel="noopener noreferrer"
-									>WhatsApp</a
-								>
-								<a class="mini-link" href="tel:+19725550100"
-									>Call</a
-								>
-								<a
-									class="mini-link"
-									href="mailto:hello@northwindstravelco.com"
-									>Email</a
+							></div>
+							<div class="journey-scrim"></div>
+							<div class="journey-meta">
+								<h3>Bespoke Journeys</h3>
+								<p>
+									Hand-built itineraries, your pace, your
+									route.
+								</p>
+								<span class="journey-cta"
+									>Plan a bespoke journey →</span
 								>
 							</div>
-							<p class="muted" style="margin-top: 1rem">
-								We are available Monday through Saturday. For
-								time-sensitive or last-minute travel, WhatsApp
-								is the fastest way to reach us.
+						</a>
+						<a
+							class="journey-card reveal"
+							href="./pages/services/explorer.html"
+						>
+							<div
+								class="journey-image"
+								style="
+									background-image: url(&quot;./assets/photos/svc-explorer.png&quot;);
+								"
+							></div>
+							<div class="journey-scrim"></div>
+							<div class="journey-meta">
+								<h3>Explorer Journeys</h3>
+								<p>
+									Honeymoons, sabbaticals, once-in-a-lifetime
+									escapes.
+								</p>
+								<span class="journey-cta"
+									>Design an escape →</span
+								>
+							</div>
+						</a>
+						<a
+							class="journey-card reveal"
+							href="./pages/services/immersion.html"
+						>
+							<div
+								class="journey-image"
+								style="
+									background-image: url(&quot;./assets/photos/svc-immersion.png&quot;);
+								"
+							></div>
+							<div class="journey-scrim"></div>
+							<div class="journey-meta">
+								<h3>Immersion Journeys</h3>
+								<p>
+									Safaris, deep-dives, and slow, intentional
+									travel.
+								</p>
+								<span class="journey-cta"
+									>Plan an immersion →</span
+								>
+							</div>
+						</a>
+						<a
+							class="journey-card reveal"
+							href="./pages/services/executive-reset.html"
+						>
+							<div
+								class="journey-image"
+								style="
+									background-image: url(&quot;./assets/photos/svc-executive-reset.png&quot;);
+								"
+							></div>
+							<div class="journey-scrim"></div>
+							<div class="journey-meta">
+								<h3>Executive Reset</h3>
+								<p>
+									Discreet wellness retreats for quiet
+									decompression.
+								</p>
+								<span class="journey-cta">Book a reset →</span>
+							</div>
+						</a>
+						<a
+							class="journey-card reveal"
+							href="./pages/services/care.html"
+						>
+							<div
+								class="journey-image"
+								style="
+									background-image: url(&quot;./assets/photos/svc-care.png&quot;);
+								"
+							></div>
+							<div class="journey-scrim"></div>
+							<div class="journey-meta">
+								<h3>Medical &amp; Recovery</h3>
+								<p>
+									World-class care abroad, fully managed
+									end-to-end.
+								</p>
+								<span class="journey-cta"
+									>Plan a care journey →</span
+								>
+							</div>
+						</a>
+						<a
+							class="journey-card reveal"
+							href="./pages/services/heritage.html"
+						>
+							<div
+								class="journey-image"
+								style="
+									background-image: url(&quot;./assets/photos/svc-heritage.png&quot;);
+								"
+							></div>
+							<div class="journey-scrim"></div>
+							<div class="journey-meta">
+								<h3>Heritage Journeys</h3>
+								<p>
+									For diaspora travelers returning home with
+									family.
+								</p>
+								<span class="journey-cta"
+									>Design a homecoming →</span
+								>
+							</div>
+						</a>
+						<a
+							class="journey-card reveal"
+							href="./pages/services/investor.html"
+						>
+							<div
+								class="journey-image"
+								style="
+									background-image: url(&quot;./assets/photos/svc-investor.png&quot;);
+								"
+							></div>
+							<div class="journey-scrim"></div>
+							<div class="journey-meta">
+								<h3>Investor Journeys</h3>
+								<p>
+									Site visits and discreet ground-level due
+									diligence.
+								</p>
+								<span class="journey-cta"
+									>Plan an investor trip →</span
+								>
+							</div>
+						</a>
+						<a
+							class="journey-card reveal"
+							href="./pages/services/lifestyle-concierge.html"
+						>
+							<div
+								class="journey-image"
+								style="
+									background-image: url(&quot;./assets/photos/svc-lifestyle-concierge.png&quot;);
+								"
+							></div>
+							<div class="journey-scrim"></div>
+							<div class="journey-meta">
+								<h3>The Concierge Desk</h3>
+								<p>
+									Last-minute bookings, corporate travel, and
+									small asks.
+								</p>
+								<span class="journey-cta">Open the desk →</span>
+							</div>
+						</a>
+					</div>
+
+					<div
+						style="
+							display: flex;
+							justify-content: center;
+							margin-top: var(--space-6);
+							gap: var(--space-3);
+							flex-wrap: wrap;
+						"
+					>
+						<a class="btn btn-primary" href="./pages/contact.html"
+							>Plan a Journey</a
+						>
+						<a
+							class="btn btn-secondary"
+							href="./pages/services.html"
+							>View all journeys</a
+						>
+					</div>
+				</div>
+			</section>
+
+			<!-- DESTINATIONS WE LOVE -->
+			<section class="section" style="background: var(--ivory-warm)">
+				<div class="container">
+					<div style="max-width: 680px">
+						<span class="eyebrow reveal">Destinations we love</span>
+						<h2 class="reveal">
+							Where Northwinds travelers are going this year.
+						</h2>
+						<p class="lede reveal">
+							A curated cross-section of the regions we route most
+							— from celebration trips to multi-country
+							itineraries to once-in-a-lifetime escapes.
+						</p>
+					</div>
+
+					<div class="destination-grid">
+						<a
+							class="destination-card reveal"
+							href="./pages/destinations.html#kenya"
+						>
+							<img
+								src="./assets/photos/dest-kenya-safari.png"
+								alt="Safari camp at golden hour on the Maasai Mara"
+							/>
+							<div class="destination-meta">
+								<span class="eyebrow">East Africa</span>
+								<h3>Safari & Conservancy</h3>
+								<p>
+									Private camps in the Mara, Serengeti, and
+									Laikipia — guided by the great migration's
+									own quiet schedule.
+								</p>
+							</div>
+						</a>
+						<a
+							class="destination-card reveal"
+							href="./pages/destinations.html#coast"
+						>
+							<img
+								src="./assets/photos/dest-coast.png"
+								alt="Swahili coast at sunrise with a wooden dhow on turquoise water"
+							/>
+							<div class="destination-meta">
+								<span class="eyebrow">Indian Ocean</span>
+								<h3>The Swahili Coast</h3>
+								<p>
+									Zanzibar, Diani, Lamu — barefoot beach
+									houses, dhows at golden hour, and a slower
+									clock.
+								</p>
+							</div>
+						</a>
+						<a
+							class="destination-card reveal"
+							href="./pages/destinations.html#global"
+						>
+							<img
+								src="./assets/photos/dest-global.png"
+								alt="Glittering global city skyline at night"
+							/>
+							<div class="destination-meta">
+								<span class="eyebrow">Global capitals</span>
+								<h3>Cities of the World</h3>
+								<p>
+									Dubai, London, Istanbul, New York,
+									Singapore, Paris — luxury hotels, private
+									transfers, and seamless routing.
+								</p>
+							</div>
+						</a>
+					</div>
+
+					<div
+						style="
+							display: flex;
+							justify-content: center;
+							margin-top: var(--space-6);
+						"
+					>
+						<a
+							class="btn btn-secondary"
+							href="./pages/destinations.html"
+							>View all destinations</a
+						>
+					</div>
+				</div>
+			</section>
+
+			<!-- ATELIER IMAGE BAND — full-bleed plane over Kilimanjaro at dawn -->
+			<section
+				class="image-band image-band-full"
+				aria-label="A worldwide travel atelier"
+				style="
+					background:
+						linear-gradient(
+							135deg,
+							rgba(8, 37, 34, 0.62) 0%,
+							rgba(8, 37, 34, 0.42) 30%,
+							rgba(8, 37, 34, 0.1) 60%,
+							rgba(8, 37, 34, 0.05) 100%
+						),
+						url(&quot;./assets/photos/section-traveler.png&quot;)
+							center/cover no-repeat;
+				"
+			>
+				<div class="container image-band-content">
+					<span class="eyebrow on-dark gold"
+						>A worldwide travel atelier</span
+					>
+					<h2>
+						Beautifully planned. Calmly executed. Anywhere on the
+						map.
+					</h2>
+				</div>
+			</section>
+
+			<!-- SPECIALTIES — two focused practice areas -->
+			<section class="section">
+				<div class="container">
+					<div style="max-width: 680px">
+						<span class="eyebrow reveal">Where we go deeper</span>
+						<h2 class="reveal">Two practices we're known for.</h2>
+						<p class="lede reveal">
+							Alongside our wider journey work, two specialties
+							define our craft — quiet, fully managed travel for
+							clients with very specific goals.
+						</p>
+					</div>
+
+					<div class="specialties-grid">
+						<a
+							class="specialty-card reveal"
+							href="./pages/services/care.html"
+						>
+							<div class="specialty-photo">
+								<img
+									src="./assets/photos/svc-care.png"
+									alt="A calm, private hospital recovery suite"
+									loading="lazy"
+								/>
+							</div>
+							<div class="specialty-body">
+								<span class="eyebrow gold">Specialty · 01</span>
+								<h3>Medical Tourism</h3>
+								<p>
+									World-class care abroad, fully managed —
+									from referral and second opinion to
+									procedure, hospital suite, and
+									post-discharge recovery. Family travels
+									alongside, with every logistic handled.
+								</p>
+								<ul class="specialty-list">
+									<li>
+										Top hospitals across India, Turkey, UAE,
+										South Africa &amp; beyond
+									</li>
+									<li>
+										Pre-op coordination, medical visas, and
+										second opinions
+									</li>
+									<li>
+										Recovery stays, private nursing, and
+										family travel built in
+									</li>
+								</ul>
+								<span class="specialty-cta"
+									>Explore medical tourism →</span
+								>
+							</div>
+						</a>
+
+						<a
+							class="specialty-card reveal"
+							href="./pages/services/investor.html"
+						>
+							<div class="specialty-photo">
+								<img
+									src="./assets/photos/svc-investor.png"
+									alt="A business discovery group walking through a global metropolis at dusk"
+									loading="lazy"
+								/>
+							</div>
+							<div class="specialty-body">
+								<span class="eyebrow gold">Specialty · 02</span>
+								<h3>
+									Investor &amp; Business Discovery Journeys
+								</h3>
+								<p>
+									Hosted business-discovery trips to China,
+									the UAE, Turkey, India and beyond — plus
+									investor site visits and ground-level due
+									diligence across East Africa. We open doors,
+									set meetings, and quietly route you through
+									the people, places, and partnerships that
+									matter.
+								</p>
+								<ul class="specialty-list">
+									<li>
+										Hosted group business discovery trips —
+										China, Guangzhou, Yiwu, Dubai, Istanbul
+									</li>
+									<li>
+										Factory tours, supplier vetting, and
+										sourcing introductions
+									</li>
+									<li>
+										Curated site visits, off-market
+										property, and operator meetings
+									</li>
+									<li>
+										Discreet ground transport, translators,
+										and on-site coordination
+									</li>
+								</ul>
+								<span class="specialty-cta"
+									>Explore discovery journeys →</span
+								>
+							</div>
+						</a>
+					</div>
+				</div>
+			</section>
+
+			<!-- KPI STRIP -->
+			<section class="kpi-strip">
+				<div class="container kpi-row">
+					<div>
+						<strong>6 continents</strong
+						><span>Routes planned across the globe</span>
+					</div>
+					<div>
+						<strong>120+ destinations</strong
+						><span>From Maasai Mara to Manhattan</span>
+					</div>
+					<div>
+						<strong>One concierge</strong
+						><span>End to end, departure to return</span>
+					</div>
+					<div>
+						<strong>24-hour reply</strong
+						><span>To every inquiry, every time</span>
+					</div>
+				</div>
+			</section>
+
+			<!-- PLANNING FLAT-LAY + WHY NORTHWINDS -->
+			<section
+				class="section section-tight"
+				style="background: var(--ivory-warm)"
+			>
+				<div class="container">
+					<div class="split-band reveal">
+						<div class="split-image">
+							<img
+								src="./assets/photos/section-planning.png"
+								alt="A leather passport holder, brass compass, and travel keepsakes on warm linen"
+							/>
+						</div>
+						<div class="split-copy">
+							<span class="eyebrow gold">Why Northwinds</span>
+							<h2>
+								Travel ateliers are common. Travel craft is
+								rare.
+							</h2>
+							<p>
+								Anyone can book a flight. We design the entire
+								journey — the route, the rhythm, the rooms, the
+								small graces between stops — so the trip itself
+								feels like an extension of how you live.
 							</p>
+							<ul class="check-list">
+								<li>
+									<strong
+										>One concierge, start to finish.</strong
+									>
+									The same person who picks up the phone is
+									the one who designs the route.
+								</li>
+								<li>
+									<strong>Worldwide on speed-dial.</strong>
+									Hotels, ground operators, and partners
+									across 6 continents.
+								</li>
+								<li>
+									<strong>Calm in chaos.</strong>
+									Cancellations, weather, delays, missed
+									connections — handled before you have to
+									ask.
+								</li>
+								<li>
+									<strong>Discretion, always.</strong> What we
+									plan stays between you and the route.
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- PROCESS -->
+			<section class="section">
+				<div class="container">
+					<div style="max-width: 580px">
+						<span class="eyebrow reveal">How it works</span>
+						<h2 class="reveal">
+							From a single message to a seamless departure.
+						</h2>
+						<p class="lede reveal">
+							Four steps, one concierge, and a journey that feels
+							considered well before you ever board.
+						</p>
+					</div>
+
+					<div class="process-grid">
+						<article class="process-step reveal">
+							<span class="process-num">01</span>
+							<h3>Share the vision</h3>
+							<p>
+								Tell us where, when, with whom — and how you
+								want the journey to feel.
+							</p>
+						</article>
+						<article class="process-step reveal">
+							<span class="process-num">02</span>
+							<h3>Receive a proposal</h3>
+							<p>
+								We shape route, pace, and style — with a short,
+								beautifully detailed plan.
+							</p>
+						</article>
+						<article class="process-step reveal">
+							<span class="process-num">03</span>
+							<h3>Refine the details</h3>
+							<p>
+								Flights, stays, transfers, dining, visas —
+								refined until everything fits.
+							</p>
+						</article>
+						<article class="process-step reveal">
+							<span class="process-num">04</span>
+							<h3>Travel well</h3>
+							<p>
+								One concierge in your corner — before takeoff,
+								in transit, and after you land.
+							</p>
+						</article>
+					</div>
+				</div>
+			</section>
+
+			<!-- PULL QUOTE -->
+			<section class="section-tight">
+				<div class="container">
+					<div class="pullquote reveal">
+						<blockquote>
+							"Great travel feels effortless because someone else
+							handled every detail before you even thought to
+							ask."
+						</blockquote>
+						<cite>— The Northwinds standard</cite>
+					</div>
+				</div>
+			</section>
+
+			<!-- TESTIMONIALS -->
+			<section class="section" style="background: var(--ivory-warm)">
+				<div class="container">
+					<div
+						style="
+							text-align: center;
+							margin-bottom: var(--space-8);
+						"
+					>
+						<span class="eyebrow reveal">Travelers</span>
+						<h2 class="reveal">In their words.</h2>
+					</div>
+					<div class="testimonial-grid">
+						<figure class="testimonial reveal">
+							<blockquote>
+								"We've planned three trips with Northwinds — a
+								Mara honeymoon, a multi-city family reunion
+								through Lisbon and Marrakesh, and a last-minute
+								Cape Town board retreat. Every detail was
+								anticipated before we even thought to ask."
+							</blockquote>
+							<figcaption>
+								<strong>Aisha &amp; Tomás K.</strong
+								><span
+									>Repeat travelers · Dallas / Nairobi</span
+								>
+							</figcaption>
+						</figure>
+						<figure class="testimonial reveal">
+							<blockquote>
+								"After my surgery in Nairobi, the Care
+								Collection arranged my entire post-discharge
+								recovery — private nursing, transport,
+								accommodation for my mother who flew in. It felt
+								like family, not a service."
+							</blockquote>
+							<figcaption>
+								<strong>Dr. Wanjiru M.</strong
+								><span
+									>Care Collection · Diaspora homecoming</span
+								>
+							</figcaption>
+						</figure>
+						<figure class="testimonial reveal">
+							<blockquote>
+								"As a fund manager I travel constantly —
+								Northwinds is the only desk that responds at
+								2am, books from a private aviation roster, and
+								never once double-bills me. Quietly
+								extraordinary."
+							</blockquote>
+							<figcaption>
+								<strong>Mr. J. Adeyemi</strong
+								><span
+									>Lifestyle Concierge · Lagos / London</span
+								>
+							</figcaption>
+						</figure>
+					</div>
+				</div>
+			</section>
+
+			<!-- PRESS / AS SEEN IN -->
+			<section class="press-strip">
+				<div class="container">
+					<div class="press-label">As featured in</div>
+					<div class="press-logos">
+						<span class="press-logo">Condé Nast Traveler</span>
+						<span class="press-logo">Travel + Leisure</span>
+						<span class="press-logo">The Standard</span>
+						<span class="press-logo">Business Daily Africa</span>
+						<span class="press-logo">Nation Travel</span>
+						<span class="press-logo">AFAR</span>
+					</div>
+				</div>
+			</section>
+
+			<!-- BLOG TEASER -->
+			<section class="section">
+				<div class="container">
+					<div
+						style="
+							display: flex;
+							justify-content: space-between;
+							align-items: end;
+							flex-wrap: wrap;
+							gap: var(--space-4);
+							margin-bottom: var(--space-8);
+						"
+					>
+						<div>
+							<span class="eyebrow reveal">Blog</span>
+							<h2 class="reveal">From the desk.</h2>
+						</div>
+						<a class="btn btn-secondary" href="./pages/blog.html"
+							>Visit the blog</a
+						>
+					</div>
+
+					<div class="service-grid">
+						<article class="service-card reveal">
+							<span class="eyebrow gold">Destinations</span>
+							<h3 style="margin-top: 0.6rem">
+								The Mara conservancies — and why they beat the
+								main reserve
+							</h3>
+							<p>
+								Private camps, exclusive game drives, and the
+								quiet pleasure of being the only vehicle at the
+								sighting.
+							</p>
+							<a
+								class="service-link"
+								href="./pages/blog/mara-conservancies.html"
+								>Read article →</a
+							>
+						</article>
+						<article class="service-card reveal">
+							<span class="eyebrow gold">Visa Concierge</span>
+							<h3 style="margin-top: 0.6rem">
+								The Kenya visa landscape in 2026 — what changed
+							</h3>
+							<p>
+								Schengen, US B1/B2, UK standard visitor, and the
+								new ETA regimes — what's actually working.
+							</p>
+							<a
+								class="service-link"
+								href="./pages/blog/kenya-visa-2026.html"
+								>Read article →</a
+							>
+						</article>
+						<article class="service-card reveal">
+							<span class="eyebrow gold">Legacy Collection</span>
+							<h3 style="margin-top: 0.6rem">
+								Planning a homecoming — beyond the round-trip
+								ticket
+							</h3>
+							<p>
+								For travelers returning to Kenya after years
+								away: how to design a trip that lives up to the
+								years apart.
+							</p>
+							<a
+								class="service-link"
+								href="./pages/blog/diaspora-homecoming.html"
+								>Read article →</a
+							>
+						</article>
+					</div>
+				</div>
+			</section>
+
+			<!-- CTA -->
+			<section class="section section-tight">
+				<div class="container">
+					<div class="cta-band reveal">
+						<span class="eyebrow on-dark gold"
+							>Begin the journey</span
+						>
+						<h2>Anywhere on the map. One number to call.</h2>
+						<p>
+							Bespoke journeys, medical residencies, legacy
+							returns home, or a desk request from across the
+							world — share where you are headed and we'll write
+							back with a route worth boarding.
+						</p>
+						<div
+							style="
+								display: flex;
+								gap: var(--space-3);
+								justify-content: center;
+								flex-wrap: wrap;
+							"
+						>
+							<a
+								class="btn btn-primary"
+								href="./pages/contact.html"
+								>Plan a Journey</a
+							>
+							<a
+								class="btn btn-ghost-light"
+								href="https://wa.me/254142378041"
+								target="_blank"
+								rel="noopener noreferrer"
+								>WhatsApp Us</a
+							>
 						</div>
 					</div>
 				</div>
 			</section>
 		</main>
 
-		<div class="sticky-cta" aria-label="Sticky contact prompt">
-			<div>
-				<div class="mini">Northwinds Travel Co.</div>
-				<strong>Start planning</strong>
-			</div>
-			<a href="#contact" class="btn btn-primary">Inquire</a>
-		</div>
+		<a
+			class="whatsapp-fab"
+			href="https://wa.me/254142378041"
+			target="_blank"
+			rel="noopener noreferrer"
+			aria-label="Chat on WhatsApp"
+		>
+			<span class="whatsapp-fab-tooltip">Chat with us</span>
+			<svg viewBox="0 0 24 24" fill="currentColor">
+				<path
+					d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"
+				/>
+			</svg>
+		</a>
 
 		<footer>
 			<div class="container footer-grid">
-				<div>
-					<p class="brand-name">Northwinds Travel Co.</p>
-					<p class="footer-note" style="margin-top: 0.75rem">
-						Curated journeys, premium planning, and global travel
-						experiences.
-					</p>
-				</div>
-				<div class="footer-note">
+				<div class="footer-brand">
+					<div class="brand-name">Northwinds Travel Co.</div>
 					<p>
-						Launch checklist: add real contact details, connect form
-						delivery, install analytics, and replace temporary
-						images.
+						A worldwide travel atelier rooted in Nairobi — curating
+						Journey, Care, Legacy, and Lifestyle Concierge
+						collections across Africa and beyond.
 					</p>
 				</div>
-				<div class="footerNav">
-					<h4
-						class="connect"
-						style="
-							padding-bottom: 0.5rem;
-							font-size: var(--text-md);
-						"
-					>
-						Connect
-					</h4>
-					<a href="#packages">Packages</a>
-					<a href="#why-us">Why Us</a>
-					<a href="#process">How It Works</a>
-					<a href="#faq">FAQ</a>
-					<a href="#contact">Contact</a>
+				<div class="footer-col">
+					<h4>Explore</h4>
+					<ul>
+						<li><a href="./pages/about.html">About Us</a></li>
+						<li><a href="./pages/services.html">Journeys</a></li>
+						<li>
+							<a href="./pages/destinations.html">Destinations</a>
+						</li>
+						<li><a href="./pages/blog.html">Blog</a></li>
+						<li><a href="./pages/contact.html">Contact</a></li>
+					</ul>
 				</div>
-				<div class="footerContact">
-					<h4 class="cont" style="padding-bottom: 0.5rem">Contact</h4>
-					<a href="mailto:info@northwindtravel.com"
-						>info@northwindtravel.com</a
-					>
-					<a href="#">Coming Soon(Office Line)</a>
-					<a href="#careers">Coming Soon</a>
-					<p class="location">Nairaobi, Kenya</p>
-					<p class="location">Dallas, Texas, U.S</p>
-					<a href="#contact">Contact</a>
+				<div class="footer-col">
+					<h4>Travel Journeys</h4>
+					<ul>
+						<li>
+							<a href="./pages/services.html#journey"
+								>Journey Collection</a
+							>
+						</li>
+						<li>
+							<a href="./pages/services.html#care"
+								>Care Collection</a
+							>
+						</li>
+						<li>
+							<a href="./pages/services.html#legacy"
+								>Legacy Collection</a
+							>
+						</li>
+						<li>
+							<a href="./pages/services.html#lifestyle"
+								>Lifestyle Concierge</a
+							>
+						</li>
+					</ul>
+				</div>
+				<div class="footer-col">
+					<h4>Contact</h4>
+					<ul>
+						<li>
+							<a
+								href="https://wa.me/254142378041"
+								target="_blank"
+								rel="noopener noreferrer"
+								>WhatsApp +254 142 378 041</a
+							>
+						</li>
+						<li>
+							<a href="tel:+254142378041">+254 142 378 041</a>
+						</li>
+						<li>
+							<a href="mailto:info@northwindstravel.com"
+								>info@northwindstravel.com</a
+							>
+						</li>
+						<li>
+							<a
+								href="https://www.instagram.com/northwindstravel"
+								target="_blank"
+								rel="noopener noreferrer"
+								>Instagram</a
+							>
+						</li>
+						<li>
+							<a
+								href="https://www.facebook.com/share/1D8cjjJp6Y/"
+								target="_blank"
+								rel="noopener noreferrer"
+								>Facebook</a
+							>
+						</li>
+					</ul>
 				</div>
 			</div>
-			<div class="container">
-				<p
-					class="copyright"
-					style="
-						margin-top: 2rem;
-						text-align: start;
-						color: var(--color-text-muted);
-						font-size: var(--text-sm);
-					"
-				>
-					&copy; 2026 Northwinds Travel Co. All rights reserved.
-				</p>
+			<div class="footer-newsletter">
+				<div class="container footer-newsletter-grid">
+					<div>
+						<h4>Letters from the desk.</h4>
+						<p>
+							Quarterly dispatches — new collections, quiet
+							seasons, and travel ideas curated by the Northwinds
+							desk. No spam, ever.
+						</p>
+					</div>
+					<form
+						class="newsletter-form"
+						action="https://formspree.io/f/your-form-id"
+						method="POST"
+						novalidate
+					>
+						<input
+							type="email"
+							name="email"
+							placeholder="Your email address"
+							required
+							aria-label="Email address"
+						/>
+						<button type="submit">Subscribe</button>
+					</form>
+				</div>
+			</div>
+
+			<div class="container footer-bottom">
+				<div>© 2026 Northwinds Travel Co. All rights reserved.</div>
+				<div>Curated in Nairobi · Routed worldwide.</div>
 			</div>
 		</footer>
 
-		<script>
-			(() => {
-				const root = document.documentElement;
-				const toggle = document.querySelector("[data-theme-toggle]");
-				let theme =
-					window.matchMedia("(prefers-color-scheme: dark)").matches ?
-						"dark"
-					:	"light";
-				const moon =
-					'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
-				const sun =
-					'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>';
-				const applyTheme = () => {
-					root.setAttribute("data-theme", theme);
-					toggle.innerHTML = theme === "dark" ? sun : moon;
-				};
-				applyTheme();
-				toggle.addEventListener("click", () => {
-					theme = theme === "dark" ? "light" : "dark";
-					applyTheme();
-				});
-				const menuToggle = document.getElementById("menuToggle");
-				const nav = document.getElementById("nav");
-				menuToggle.addEventListener("click", () => {
-					const open = nav.classList.toggle("open");
-					menuToggle.setAttribute("aria-expanded", String(open));
-				});
-				nav.querySelectorAll("a").forEach((link) =>
-					link.addEventListener("click", () => {
-						nav.classList.remove("open");
-						menuToggle.setAttribute("aria-expanded", "false");
-					}),
-				);
-				const observer = new IntersectionObserver(
-					(entries) => {
-						entries.forEach((entry) => {
-							if (entry.isIntersecting)
-								entry.target.classList.add("visible");
-						});
-					},
-					{ threshold: 0.15 },
-				);
-				document
-					.querySelectorAll(".reveal")
-					.forEach((el) => observer.observe(el));
-			})();
-		</script>
+		<script src="./js/app.js"></script>
 	</body>
 </html>

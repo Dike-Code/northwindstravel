@@ -1,0 +1,540 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="icon"
+			type="image/png"
+			href="../../assets/brand/favicon.png"
+		/>
+		<script>
+			(function () {
+				try {
+					var t = localStorage.getItem("nw-theme");
+					if (!t) {
+						t =
+							(
+								window.matchMedia &&
+								window.matchMedia(
+									"(prefers-color-scheme: dark)",
+								).matches
+							) ?
+								"dark"
+							:	"light";
+					}
+					document.documentElement.setAttribute("data-theme", t);
+				} catch (e) {}
+			})();
+		</script>
+		<title>Visa Concierge — Northwinds Travel Co.</title>
+		<meta
+			name="description"
+			content="End-to-end visa, residency, and consular paperwork."
+		/>
+		<meta name="theme-color" content="#0f3431" />
+		<meta
+			property="og:title"
+			content="Visa Concierge — Northwinds Travel Co."
+		/>
+		<meta
+			property="og:description"
+			content="End-to-end visa, residency, and consular paperwork."
+		/>
+		<meta property="og:type" content="website" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="../../css/style.css?v=1778780936" />
+		<!-- Favicons -->
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="../../assets/brand/favicon-32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="../../assets/brand/favicon-16.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="../../assets/brand/favicon-180.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="192x192"
+			href="../../assets/brand/favicon-192.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="512x512"
+			href="../../assets/brand/favicon-512.png"
+		/>
+		<!-- Open Graph -->
+		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content="Northwinds Travel Co." />
+		<meta
+			property="og:title"
+			content="Visa Concierge — Northwinds Travel Co."
+		/>
+		<meta
+			property="og:description"
+			content="End-to-end visa, residency, and consular paperwork."
+		/>
+		<meta
+			property="og:url"
+			content="https://www.northwindstravel.com/pages/services/visa.html"
+		/>
+		<meta
+			property="og:image"
+			content="https://www.northwindstravel.com/assets/og/og-services.png"
+		/>
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+		<!-- Twitter -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta
+			name="twitter:title"
+			content="Visa Concierge — Northwinds Travel Co."
+		/>
+		<meta
+			name="twitter:description"
+			content="End-to-end visa, residency, and consular paperwork."
+		/>
+		<meta
+			name="twitter:image"
+			content="https://www.northwindstravel.com/assets/og/og-services.png"
+		/>
+		<!-- Canonical -->
+		<link
+			rel="canonical"
+			href="https://www.northwindstravel.com/pages/services/visa.html"
+		/>
+	</head>
+	<body>
+		<a
+			href="#main"
+			class="skip-link"
+			style="position: absolute; left: -999px"
+			>Skip to content</a
+		>
+		<div class="top-ribbon">
+			<div class="container ribbon-announce">
+				<a class="ribbon-announce-link" href="../contact.html"
+					><svg
+						class="ribbon-leaf"
+						width="13"
+						height="13"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="1.8"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						aria-hidden="true"
+					>
+						<path
+							d="M7 20c0-9 7-13 14-13-1 8-5 13-13 13-1 0-1 0-1 0z"
+						/>
+						<path d="M7 20c2-5 6-8 11-9" />
+					</svg>
+					<span class="ribbon-text"
+						>Now welcoming new travelers</span
+					></a
+				>
+			</div>
+		</div>
+		<header class="site-header">
+			<div class="container header-row">
+				<a
+					href="../../index.html"
+					class="brand"
+					aria-label="Northwinds Travel Co. home"
+				>
+					<span class="brand-mark" aria-hidden="true"
+						><img
+							src="../../assets/brand/northwinds-mark.png"
+							alt=""
+					/></span>
+					<span>
+						<span class="brand-name">Northwinds Travel Co.</span>
+						<span class="brand-sub">Curated Global Journeys</span>
+					</span>
+				</a>
+				<nav class="nav" id="nav" aria-label="Primary navigation">
+					<a href="../../index.html">Home</a>
+					<a href="../about.html">About Us</a>
+					<a href="../services.html" class="active">Journeys</a>
+					<a href="../destinations.html">Destinations</a>
+					<a href="../blog.html">Blog</a>
+					<a href="../contact.html">Contact</a>
+				</nav>
+				<div class="header-actions">
+					<a
+						class="btn btn-forest"
+						href="../contact.html"
+						style="min-height: 44px; padding: 0 1.1rem"
+						>Plan a Journey</a
+					>
+					<button
+						class="theme-toggle"
+						id="themeToggle"
+						aria-label="Toggle day / night mode"
+						type="button"
+					>
+						<svg
+							class="icon-moon"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="1.8"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							aria-hidden="true"
+						>
+							<path
+								d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"
+							/>
+						</svg>
+						<svg
+							class="icon-sun"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="1.8"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							aria-hidden="true"
+						>
+							<circle cx="12" cy="12" r="4" />
+							<path
+								d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"
+							/>
+						</svg>
+					</button>
+					<button
+						class="icon-btn menu-toggle"
+						id="menuToggle"
+						aria-label="Open menu"
+						aria-expanded="false"
+						aria-controls="nav"
+					>
+						<svg
+							width="20"
+							height="20"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+						>
+							<path d="M3 12h18M3 6h18M3 18h18" />
+						</svg>
+					</button>
+				</div>
+			</div>
+		</header>
+		<main id="main">
+			<section class="subpage-hero">
+				<div class="subpage-hero-photo">
+					<img src="../../assets/photos/svc-visa.png" alt="" />
+				</div>
+				<div class="subpage-hero-overlay"></div>
+				<div class="container subpage-hero-content">
+					<span class="eyebrow on-dark gold"
+						><a
+							href="../services.html#lifestyle"
+							style="color: inherit; text-decoration: none"
+							>Lifestyle Concierge</a
+						></span
+					>
+					<h1>Visa Concierge</h1>
+					<p class="lede">
+						End-to-end visa, residency, and consular paperwork.
+					</p>
+				</div>
+			</section>
+			<section class="section-prose">
+				<div class="container subpage-prose reveal">
+					<p>
+						Visa Concierge handles consular and residency paperwork
+						end-to-end — Kenyan eVisa, ETA, multi-country Schengen,
+						US business and visitor visas, and longer-term residency
+						options. We do the forms, the appointments, and the
+						follow-ups.
+					</p>
+				</div>
+			</section>
+			<section class="section-panels">
+				<div class="container">
+					<div class="subpage-twocol reveal">
+						<div class="subpage-panel">
+							<h3 class="panel-heading">
+								<span class="panel-eyebrow">Perfect for</span
+								>This journey suits
+							</h3>
+							<ul class="check-list">
+								<li>
+									Travelers planning multi-country trips with
+									visa requirements
+								</li>
+								<li>
+									Diaspora clients managing dual residency
+									paperwork
+								</li>
+								<li>
+									Founders applying for business or talent
+									visas
+								</li>
+								<li>
+									Families coordinating school, work, and
+									visitor visas together
+								</li>
+							</ul>
+						</div>
+						<div class="subpage-panel">
+							<h3 class="panel-heading">
+								<span class="panel-eyebrow"
+									>What’s included</span
+								>Every Visa Concierge engagement
+							</h3>
+							<ul class="check-list">
+								<li>
+									Eligibility assessment and document
+									checklist
+								</li>
+								<li>
+									Application drafting and consular filing
+								</li>
+								<li>
+									Appointment booking and rehearsal where
+									required
+								</li>
+								<li>Status tracking and follow-up</li>
+								<li>
+									Backup plan if a visa is delayed or denied
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="section-tiers">
+				<div class="container">
+					<div class="tier-band reveal">
+						<div class="tier-band-header">
+							<span class="eyebrow gold">Choose your scale</span>
+							<h2>Essential · Elevated · Elite</h2>
+							<p class="tier-band-sub">
+								Three ways to enter the same journey — pick the
+								depth that matches the moment.
+							</p>
+						</div>
+						<div class="tier-grid">
+							<div class="tier-card">
+								<span class="tier-badge">Essential</span>
+								<p>
+									Single visa filing per traveler — visitor,
+									eVisa, ETA.
+								</p>
+							</div>
+							<div class="tier-card tier-elevated">
+								<span class="tier-badge">Elevated</span>
+								<p>
+									Multi-country bundle, business and family
+									member coordination, expedited processing.
+								</p>
+							</div>
+							<div class="tier-card tier-elite">
+								<span class="tier-badge">Elite</span>
+								<p>
+									Long-term residency strategy across
+									jurisdictions, immigration counsel
+									introductions, multi-year tracking.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="section-cta">
+				<div class="container">
+					<div class="cta-band reveal">
+						<span class="eyebrow on-dark gold"
+							>Begin the journey</span
+						>
+						<h2>Plan your visa concierge</h2>
+						<p
+							style="
+								max-width: 640px;
+								margin: 0 auto var(--space-6);
+								color: rgba(255, 255, 255, 0.85);
+							"
+						>
+							A complimentary planning call is always the first
+							step. Tell us what you're imagining — we'll take it
+							from there.
+						</p>
+						<div
+							style="
+								display: flex;
+								gap: var(--space-3);
+								justify-content: center;
+								flex-wrap: wrap;
+							"
+						>
+							<a class="btn btn-primary" href="../contact.html"
+								>Plan this journey</a
+							>
+							<a
+								class="btn btn-ghost-light"
+								href="https://wa.me/254142378041"
+								target="_blank"
+								rel="noopener noreferrer"
+								>WhatsApp Us</a
+							>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<a
+			class="whatsapp-fab"
+			href="https://wa.me/254142378041"
+			target="_blank"
+			rel="noopener noreferrer"
+			aria-label="Chat on WhatsApp"
+		>
+			<span class="whatsapp-fab-tooltip">Chat with us</span>
+			<svg viewBox="0 0 24 24" fill="currentColor">
+				<path
+					d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"
+				/>
+			</svg>
+		</a>
+
+		<footer>
+			<div class="container footer-grid">
+				<div class="footer-brand">
+					<div class="brand-name">Northwinds Travel Co.</div>
+					<p>
+						A worldwide travel atelier rooted in Nairobi — curating
+						Journey, Care, Legacy, and Lifestyle Concierge
+						collections across Africa and beyond.
+					</p>
+				</div>
+				<div class="footer-col">
+					<h4>Explore</h4>
+					<ul>
+						<li><a href="../about.html">About Us</a></li>
+						<li><a href="../services.html">Journeys</a></li>
+						<li><a href="../destinations.html">Destinations</a></li>
+						<li><a href="../blog.html">Blog</a></li>
+						<li><a href="../contact.html">Contact</a></li>
+					</ul>
+				</div>
+				<div class="footer-col">
+					<h4>Travel Journeys</h4>
+					<ul>
+						<li>
+							<a href="../services.html#journey"
+								>Journey Collection</a
+							>
+						</li>
+						<li>
+							<a href="../services.html#care">Care Collection</a>
+						</li>
+						<li>
+							<a href="../services.html#legacy"
+								>Legacy Collection</a
+							>
+						</li>
+						<li>
+							<a href="../services.html#lifestyle"
+								>Lifestyle Concierge</a
+							>
+						</li>
+					</ul>
+				</div>
+				<div class="footer-col">
+					<h4>Contact</h4>
+					<ul>
+						<li>
+							<a
+								href="https://wa.me/254142378041"
+								target="_blank"
+								rel="noopener noreferrer"
+								>WhatsApp +254 142 378 041</a
+							>
+						</li>
+						<li>
+							<a href="tel:+254142378041">+254 142 378 041</a>
+						</li>
+						<li>
+							<a href="mailto:info@northwindstravel.com"
+								>info@northwindstravel.com</a
+							>
+						</li>
+						<li>
+							<a
+								href="https://www.instagram.com/northwindstravel"
+								target="_blank"
+								rel="noopener noreferrer"
+								>Instagram</a
+							>
+						</li>
+						<li>
+							<a
+								href="https://www.facebook.com/share/1D8cjjJp6Y/"
+								target="_blank"
+								rel="noopener noreferrer"
+								>Facebook</a
+							>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer-newsletter">
+				<div class="container footer-newsletter-grid">
+					<div>
+						<h4>Letters from the desk.</h4>
+						<p>
+							Quarterly dispatches — new collections, quiet
+							seasons, and travel ideas curated by the Northwinds
+							desk. No spam, ever.
+						</p>
+					</div>
+					<form
+						class="newsletter-form"
+						action="https://formspree.io/f/your-form-id"
+						method="POST"
+						novalidate
+					>
+						<input
+							type="email"
+							name="email"
+							placeholder="Your email address"
+							required
+							aria-label="Email address"
+						/>
+						<button type="submit">Subscribe</button>
+					</form>
+				</div>
+			</div>
+
+			<div class="container footer-bottom">
+				<div>© 2026 Northwinds Travel Co. All rights reserved.</div>
+				<div>Curated in Nairobi · Routed worldwide.</div>
+			</div>
+		</footer>
+		<script src="../../js/app.js"></script>
+	</body>
+</html>

@@ -1,0 +1,656 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/png" href="../assets/brand/favicon.png" />
+		<script>
+			(function () {
+				try {
+					var t = localStorage.getItem("nw-theme");
+					if (!t) {
+						t =
+							(
+								window.matchMedia &&
+								window.matchMedia(
+									"(prefers-color-scheme: dark)",
+								).matches
+							) ?
+								"dark"
+							:	"light";
+					}
+					document.documentElement.setAttribute("data-theme", t);
+				} catch (e) {}
+			})();
+		</script>
+		<title>
+			About Northwinds Travel Co. — Curated in Nairobi, Routed Worldwide
+		</title>
+		<meta
+			name="description"
+			content="A worldwide travel atelier built on craft, calm, and care."
+		/>
+		<meta name="theme-color" content="#0f3431" />
+		<meta
+			property="og:title"
+			content="About Northwinds Travel Co. — Curated in Nairobi, Routed Worldwide"
+		/>
+		<meta
+			property="og:description"
+			content="A worldwide travel atelier built on craft, calm, and care."
+		/>
+		<meta property="og:type" content="website" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="../css/style.css?v=1778780936" />
+		<!-- Favicons -->
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="../assets/brand/favicon-32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="../assets/brand/favicon-16.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="../assets/brand/favicon-180.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="192x192"
+			href="../assets/brand/favicon-192.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="512x512"
+			href="../assets/brand/favicon-512.png"
+		/>
+		<!-- Open Graph -->
+		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content="Northwinds Travel Co." />
+		<meta
+			property="og:title"
+			content="About Northwinds Travel Co. — Curated in Nairobi, Routed Worldwide"
+		/>
+		<meta
+			property="og:description"
+			content="A worldwide travel atelier built on craft, calm, and care."
+		/>
+		<meta
+			property="og:url"
+			content="https://www.northwindstravel.com/pages/about.html"
+		/>
+		<meta
+			property="og:image"
+			content="https://www.northwindstravel.com/assets/og/og-about.png"
+		/>
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+		<!-- Twitter -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta
+			name="twitter:title"
+			content="About Northwinds Travel Co. — Curated in Nairobi, Routed Worldwide"
+		/>
+		<meta
+			name="twitter:description"
+			content="A worldwide travel atelier built on craft, calm, and care."
+		/>
+		<meta
+			name="twitter:image"
+			content="https://www.northwindstravel.com/assets/og/og-about.png"
+		/>
+		<!-- Canonical -->
+		<link
+			rel="canonical"
+			href="https://www.northwindstravel.com/pages/about.html"
+		/>
+	</head>
+	<body>
+		<a
+			href="#main"
+			class="skip-link"
+			style="position: absolute; left: -999px"
+			>Skip to content</a
+		>
+
+		<div class="top-ribbon">
+			<div class="container ribbon-announce">
+				<a class="ribbon-announce-link" href="./contact.html"
+					><svg
+						class="ribbon-leaf"
+						width="13"
+						height="13"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="1.8"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						aria-hidden="true"
+					>
+						<path
+							d="M7 20c0-9 7-13 14-13-1 8-5 13-13 13-1 0-1 0-1 0z"
+						/>
+						<path d="M7 20c2-5 6-8 11-9" />
+					</svg>
+					<span class="ribbon-text"
+						>Now welcoming new travelers</span
+					></a
+				>
+			</div>
+		</div>
+
+		<header class="site-header">
+			<div class="container header-row">
+				<a
+					href="../index.html"
+					class="brand"
+					aria-label="Northwinds Travel Co. home"
+				>
+					<span class="brand-mark" aria-hidden="true"
+						><img src="../assets/brand/northwinds-mark.png" alt=""
+					/></span>
+					<span>
+						<span class="brand-name">Northwinds Travel Co.</span>
+						<span class="brand-sub">Curated Global Journeys</span>
+					</span>
+				</a>
+				<nav class="nav" id="nav" aria-label="Primary navigation">
+					<a href="../index.html">Home</a>
+					<a href="./about.html" class="active">About Us</a>
+					<a href="./services.html">Journeys</a>
+					<a href="./destinations.html">Destinations</a>
+					<a href="./blog.html">Blog</a>
+					<a href="./contact.html">Contact</a>
+				</nav>
+				<div class="header-actions">
+					<a
+						class="btn btn-forest"
+						href="./contact.html"
+						style="min-height: 44px; padding: 0 1.1rem"
+						>Plan a Journey</a
+					>
+					<button
+						class="theme-toggle"
+						id="themeToggle"
+						aria-label="Toggle day / night mode"
+						type="button"
+					>
+						<svg
+							class="icon-moon"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="1.8"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							aria-hidden="true"
+						>
+							<path
+								d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"
+							/>
+						</svg>
+						<svg
+							class="icon-sun"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="1.8"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							aria-hidden="true"
+						>
+							<circle cx="12" cy="12" r="4" />
+							<path
+								d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"
+							/>
+						</svg>
+					</button>
+					<button
+						class="icon-btn menu-toggle"
+						id="menuToggle"
+						aria-label="Open menu"
+						aria-expanded="false"
+						aria-controls="nav"
+					>
+						<svg
+							width="20"
+							height="20"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+						>
+							<path d="M3 12h18M3 6h18M3 18h18" />
+						</svg>
+					</button>
+				</div>
+			</div>
+		</header>
+
+		<main id="main">
+			<section class="page-hero">
+				<div class="container">
+					<span class="eyebrow on-dark gold">About Us</span>
+					<h1>Curated in Nairobi. Routed worldwide.</h1>
+					<p class="lede">
+						Northwinds Travel Co. is a worldwide travel atelier
+						built on the belief that great travel is craft — and
+						that craft deserves to be felt at every stage of the
+						journey.
+					</p>
+				</div>
+			</section>
+			<section class="section">
+				<div class="container">
+					<div class="split-band reveal">
+						<div class="split-copy">
+							<span class="eyebrow gold">Our story</span>
+							<h2>Built for travelers who expect more.</h2>
+							<p>
+								Northwinds began with a simple observation:
+								travelers from East Africa — and the diaspora
+								returning home — were being underserved by the
+								standard agency model. Forms, call centers, and
+								templated itineraries weren't equal to the
+								journeys they were planning.
+							</p>
+							<p>
+								So we built a travel atelier that works the
+								other way. One concierge. A direct line. A
+								studio-style process that treats every itinerary
+								as a piece of work. And a worldwide network of
+								partners who answer the moment we call.
+							</p>
+							<p>
+								Today, we plan journeys to more than 120
+								destinations across 6 continents — from
+								honeymoons in the Maldives to multi-generational
+								reunions in London, from quiet safari weeks in
+								Laikipia to weeks of business travel through the
+								Gulf.
+							</p>
+						</div>
+						<div class="split-image">
+							<img
+								src="../assets/photos/section-our-story.png"
+								alt="Northwinds safari guide in branded uniform beside the Northwinds Land Cruiser on the Maasai Mara"
+							/>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="section" style="background: var(--ivory-warm)">
+				<div class="container">
+					<div style="max-width: 680px">
+						<span class="eyebrow reveal">What we believe</span>
+						<h2 class="reveal">
+							Four ideas that shape every itinerary.
+						</h2>
+					</div>
+					<div class="service-grid">
+						<article class="service-card reveal">
+							<h3>Travel is craft.</h3>
+							<p>
+								Every itinerary is designed, not assembled.
+								Route, pacing, transitions, and the small graces
+								between stops are all part of the work.
+							</p>
+						</article>
+						<article class="service-card reveal">
+							<h3>One concierge wins.</h3>
+							<p>
+								Call centers fragment trust. A single concierge
+								— who knows your file and your taste — wins
+								every time.
+							</p>
+						</article>
+						<article class="service-card reveal">
+							<h3>The world is worth seeing.</h3>
+							<p>
+								Africa, Europe, Asia, the Americas, the Middle
+								East, the Pacific. We plan everywhere our
+								travelers want to go.
+							</p>
+						</article>
+						<article class="service-card reveal">
+							<h3>Discretion is part of luxury.</h3>
+							<p>
+								Your travel is your own. What we plan stays
+								between you, the concierge, and the route.
+							</p>
+						</article>
+					</div>
+				</div>
+			</section>
+
+			<!-- FOUNDER'S NOTE -->
+			<section class="section" style="background: var(--cream, #fbf9f3)">
+				<div class="container">
+					<div class="founder-note reveal">
+						<div class="founder-note-eyebrow">
+							<span class="eyebrow gold"
+								>A note from the desk</span
+							>
+						</div>
+						<blockquote class="founder-quote">
+							<p>
+								Northwinds began with a question our own
+								families kept asking: why is travel — the most
+								personal, most anticipated thing we plan all
+								year — so often handled like a transaction?
+							</p>
+							<p>
+								We built this atelier to answer that. Every
+								itinerary we write is one designer, one number,
+								one quiet promise: that the trip you take will
+								match the trip you imagined. Whether it's a
+								private safari, a homecoming after twenty years
+								away, a medical residency that needs care after
+								the surgery, or a last-minute boarding from
+								anywhere on the map — the standard is the same.
+							</p>
+							<p>Welcome aboard. Tell us where you're headed.</p>
+						</blockquote>
+						<div class="founder-sign">
+							<div class="founder-sign-name">
+								The Northwinds Concierge Team
+							</div>
+							<div class="founder-sign-title">
+								Nairobi · Worldwide
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="section">
+				<div class="container">
+					<div style="max-width: 680px">
+						<span class="eyebrow reveal">What we plan</span>
+						<h2 class="reveal">A full travel atelier.</h2>
+						<p class="lede reveal">
+							Four collections, one quiet standard. From a bespoke
+							leisure itinerary to a multi-month medical
+							residency, every journey we design rests on the same
+							foundation — one designer, one number, every detail
+							in hand.
+						</p>
+					</div>
+					<div class="careclass-list-wrap">
+						<div class="about-collections">
+							<div class="about-collection">
+								<span class="eyebrow gold"
+									>Journey Collection</span
+								>
+								<h3>Bespoke leisure & immersive travel</h3>
+								<ul>
+									<li>
+										Bespoke Journeys — private, hand-built
+										itineraries
+									</li>
+									<li>
+										Explorer Journeys — character-rich
+										small-group travel
+									</li>
+									<li>
+										Immersion Journeys — culinary, wellness,
+										spiritual
+									</li>
+									<li>
+										Executive Reset — 5–10 night sabbaticals
+									</li>
+								</ul>
+							</div>
+							<div class="about-collection">
+								<span class="eyebrow gold"
+									>Care Collection</span
+								>
+								<h3>Medical, recovery & wellness travel</h3>
+								<ul>
+									<li>
+										Care Journeys — referral to recovery,
+										end to end
+									</li>
+									<li>
+										Premier Care — VIP suites & 1:1 medical
+										concierge
+									</li>
+									<li>
+										Fertility &amp; Life Journeys — IVF,
+										surrogacy, new-baby
+									</li>
+									<li>
+										Aesthetic &amp; Dental — recovered like
+										a retreat
+									</li>
+								</ul>
+							</div>
+							<div class="about-collection">
+								<span class="eyebrow gold"
+									>Legacy Collection</span
+								>
+								<h3>Heritage, investor & education travel</h3>
+								<ul>
+									<li>
+										Heritage Journeys — diaspora homecomings
+									</li>
+									<li>
+										Investor Journeys — property tours & due
+										diligence
+									</li>
+									<li>
+										Education Journeys — university tours &
+										study-abroad
+									</li>
+								</ul>
+							</div>
+							<div class="about-collection">
+								<span class="eyebrow gold"
+									>Lifestyle Concierge</span
+								>
+								<h3>The day-to-day desk</h3>
+								<ul>
+									<li>
+										Lifestyle Concierge — annual membership
+										desk
+									</li>
+									<li>
+										Corporate Travel Management — founders &
+										small teams
+									</li>
+									<li>
+										Visa Concierge — residency, consular,
+										mobility
+									</li>
+									<li>
+										Emergency Travel Concierge — rapid
+										departures
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="section section-tight">
+				<div class="container">
+					<div class="cta-band reveal">
+						<span class="eyebrow on-dark gold">Plan with us</span>
+						<h2>Tell us where you want to go.</h2>
+						<p>
+							One inquiry. One concierge. One trip that feels
+							considered before you ever board.
+						</p>
+						<div
+							style="
+								display: flex;
+								gap: var(--space-3);
+								justify-content: center;
+								flex-wrap: wrap;
+							"
+						>
+							<a class="btn btn-primary" href="./contact.html"
+								>Plan a Journey</a
+							>
+							<a
+								class="btn btn-ghost-light"
+								href="https://wa.me/254142378041"
+								target="_blank"
+								rel="noopener noreferrer"
+								>WhatsApp Us</a
+							>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<a
+			class="whatsapp-fab"
+			href="https://wa.me/254142378041"
+			target="_blank"
+			rel="noopener noreferrer"
+			aria-label="Chat on WhatsApp"
+		>
+			<span class="whatsapp-fab-tooltip">Chat with us</span>
+			<svg viewBox="0 0 24 24" fill="currentColor">
+				<path
+					d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"
+				/>
+			</svg>
+		</a>
+
+		<footer>
+			<div class="container footer-grid">
+				<div class="footer-brand">
+					<div class="brand-name">Northwinds Travel Co.</div>
+					<p>
+						A worldwide travel atelier rooted in Nairobi — curating
+						Journey, Care, Legacy, and Lifestyle Concierge
+						collections across Africa and beyond.
+					</p>
+				</div>
+				<div class="footer-col">
+					<h4>Explore</h4>
+					<ul>
+						<li><a href="./about.html">About Us</a></li>
+						<li><a href="./services.html">Journeys</a></li>
+						<li><a href="./destinations.html">Destinations</a></li>
+						<li><a href="./blog.html">Blog</a></li>
+						<li><a href="./contact.html">Contact</a></li>
+					</ul>
+				</div>
+				<div class="footer-col">
+					<h4>Travel Journeys</h4>
+					<ul>
+						<li>
+							<a href="./services.html#journey"
+								>Journey Collection</a
+							>
+						</li>
+						<li>
+							<a href="./services.html#care">Care Collection</a>
+						</li>
+						<li>
+							<a href="./services.html#legacy"
+								>Legacy Collection</a
+							>
+						</li>
+						<li>
+							<a href="./services.html#lifestyle"
+								>Lifestyle Concierge</a
+							>
+						</li>
+					</ul>
+				</div>
+				<div class="footer-col">
+					<h4>Contact</h4>
+					<ul>
+						<li>
+							<a
+								href="https://wa.me/254142378041"
+								target="_blank"
+								rel="noopener noreferrer"
+								>WhatsApp +254 142 378 041</a
+							>
+						</li>
+						<li>
+							<a href="tel:+254142378041">+254 142 378 041</a>
+						</li>
+						<li>
+							<a href="mailto:info@northwindstravel.com"
+								>info@northwindstravel.com</a
+							>
+						</li>
+						<li>
+							<a
+								href="https://www.instagram.com/northwindstravel"
+								target="_blank"
+								rel="noopener noreferrer"
+								>Instagram</a
+							>
+						</li>
+						<li>
+							<a
+								href="https://www.facebook.com/share/1D8cjjJp6Y/"
+								target="_blank"
+								rel="noopener noreferrer"
+								>Facebook</a
+							>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer-newsletter">
+				<div class="container footer-newsletter-grid">
+					<div>
+						<h4>Letters from the desk.</h4>
+						<p>
+							Quarterly dispatches — new collections, quiet
+							seasons, and travel ideas curated by the Northwinds
+							desk. No spam, ever.
+						</p>
+					</div>
+					<form
+						class="newsletter-form"
+						action="https://formspree.io/f/your-form-id"
+						method="POST"
+						novalidate
+					>
+						<input
+							type="email"
+							name="email"
+							placeholder="Your email address"
+							required
+							aria-label="Email address"
+						/>
+						<button type="submit">Subscribe</button>
+					</form>
+				</div>
+			</div>
+
+			<div class="container footer-bottom">
+				<div>© 2026 Northwinds Travel Co. All rights reserved.</div>
+				<div>Curated in Nairobi · Routed worldwide.</div>
+			</div>
+		</footer>
+
+		<script src="../js/app.js"></script>
+	</body>
+</html>

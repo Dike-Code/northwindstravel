@@ -54,44 +54,49 @@
 		onSuccess,
 		onError,
 	}) {
-		const ACCOUNT_ID = "2342537"; // REPLACE_WITH_MAILERLITE_ACCOUNT_ID
-		const formId = "187714994342725328"; // REPLACE_WITH_DEFAULT_FORM_ID
-		const endpoint = `https://assets.mailerlite.com/jsonp/${ACCOUNT_ID}/forms/${formId}/subscribe`;
+		const ACCOUNT_ID = "2342537"; // Double-check this matches your MailerLite account ID
+
+		// Fallback to default form ID if none passed via data attribute
+		const finalFormId = formId || "187714994342725328";
+		const endpoint = `https://assets.mailerlite.com/jsonp/${ACCOUNT_ID}/forms/${finalFormId}/subscribe`;
 
 		// Honeypot — if filled, silently "succeed" without submitting
 		if (data._gotcha) {
 			if (onSuccess) onSuccess();
 			return;
-		} else {
-			document
-				.querySelectorAll('errorror[name="_gotcha"]')
-				.forEach((el) => (el.style.display = "block"));
 		}
 
 		try {
 			const payload = new URLSearchParams();
 			payload.append("fields[email]", data.email || "");
+
+			// MailerLite default fields are typically 'name' and 'last_name'
 			if (data.first_name)
 				payload.append("fields[name]", data.first_name);
 			if (data.last_name)
 				payload.append("fields[last_name]", data.last_name);
 			if (data.phone) payload.append("fields[phone]", data.phone);
+
+			// Custom field — Make sure 'traveler_type' exists exactly like this in MailerLite
 			if (data.traveler_type)
 				payload.append("fields[traveler_type]", data.traveler_type);
+
 			if (data.service) payload.append("fields[service]", data.service);
 			if (data.message) payload.append("fields[message]", data.message);
+
 			if (groupId) payload.append("groups[]", groupId);
 			payload.append("ml-submit", "1");
 			payload.append("anticsrf", "true");
 
 			await fetch(endpoint, {
 				method: "POST",
-				mode: "no-cors",
+				mode: "no-cors", // Necessary for cross-domain JSONP tracking endpoints
 				headers: {
 					"Content-Type": "application/x-www-form-urlencoded",
 				},
 				body: payload.toString(),
 			});
+
 			if (onSuccess) onSuccess();
 		} catch (err) {
 			console.error("MailerLite subscribe error:", err);
@@ -103,6 +108,7 @@
 	document.querySelectorAll("form[data-ml-form]").forEach((form) => {
 		form.addEventListener("submit", async (e) => {
 			e.preventDefault();
+
 			const formId = form.dataset.mlFormId;
 			const groupId = form.dataset.mlGroupId;
 			const wrapper =
@@ -126,7 +132,9 @@
 				_gotcha: (fd.get("_gotcha") || "").toString().trim(),
 			};
 
+			if (errorEl) errorEl.style.with = "none";
 			if (errorEl) errorEl.style.display = "none";
+
 			if (submitBtn) {
 				submitBtn.disabled = true;
 				submitBtn.dataset.origLabel = submitBtn.textContent;

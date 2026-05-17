@@ -54,13 +54,18 @@
 		onSuccess,
 		onError,
 	}) {
-		const ACCOUNT_ID = "REPLACE_WITH_MAILERLITE_ACCOUNT_ID";
+		const ACCOUNT_ID = "2342537"; // REPLACE_WITH_MAILERLITE_ACCOUNT_ID
+		const formId = formId || "187714994342725328"; // REPLACE_WITH_DEFAULT_FORM_ID
 		const endpoint = `https://assets.mailerlite.com/jsonp/${ACCOUNT_ID}/forms/${formId}/subscribe`;
 
 		// Honeypot — if filled, silently "succeed" without submitting
 		if (data._gotcha) {
 			if (onSuccess) onSuccess();
 			return;
+		} else {
+			document
+				.querySelectorAll('errorror[name="_gotcha"]')
+				.forEach((el) => (el.style.display = "block"));
 		}
 
 		try {

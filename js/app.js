@@ -45,7 +45,6 @@
 
 	// =====================================================================
 	// MailerLite subscribe helper — used by Northwinds lead forms
-	// The dev team will replace REPLACE_WITH_* placeholders with real IDs.
 	// =====================================================================
 	window.northwindsMlSubscribe = async function ({
 		formId,
@@ -109,6 +108,12 @@
 		form.addEventListener("submit", async (e) => {
 			e.preventDefault();
 
+			// 1. Verify fields match HTML requirements (required, email structure, etc.)
+			if (!form.checkValidity()) {
+				form.reportValidity(); // Shows standard browser error popups
+				return; // Kills execution so empty details don't process
+			}
+
 			const formId = form.dataset.mlFormId;
 			const groupId = form.dataset.mlGroupId;
 			const wrapper =
@@ -132,7 +137,7 @@
 				_gotcha: (fd.get("_gotcha") || "").toString().trim(),
 			};
 
-			if (errorEl) errorEl.style.with = "none";
+			// Fixed the .style.with typo here
 			if (errorEl) errorEl.style.display = "none";
 
 			if (submitBtn) {

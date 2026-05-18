@@ -874,6 +874,8 @@ p {
 	/* Cap description to 3 lines so very-long copy doesn't push the title up */
 	display: -webkit-box;
 	-webkit-line-clamp: 3;
+	/* Standard property for compatibility */
+	line-clamp: 3;
 	-webkit-box-orient: vertical;
 	overflow: hidden;
 }

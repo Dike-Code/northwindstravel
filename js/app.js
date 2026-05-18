@@ -42,49 +42,6 @@
 			}, 250);
 		});
 	}
-	// JS for newsletter form submission to Formspree with custom popup modal
-	document
-		.querySelector(".newsletter-form")
-		.addEventListener("submit", function (event) {
-			event.preventDefault(); // Stop the default Formspree page redirect
-
-			const form = this;
-			const data = new FormData(form);
-			const button = form.querySelector('button[type="submit"]');
-
-			// Optional: Disable button during submission
-			if (button) button.disabled = true;
-
-			// Send data to Formspree via AJAX
-			fetch(form.action, {
-				method: form.method,
-				body: data,
-				headers: {
-					Accept: "application/json",
-				},
-			})
-				.then((response) => {
-					if (response.ok) {
-						// Show your custom popup modal
-						document.getElementById("popupModal").style.display =
-							"flex";
-						form.reset(); // Clear the email input field
-					} else {
-						alert("Oops! There was a problem submitting your form");
-					}
-				})
-				.catch((error) => {
-					alert("Oops! There was a problem submitting your form");
-				})
-				.finally(() => {
-					// Re-enable button
-					if (button) button.disabled = false;
-				});
-		});
-
-	function closePopup() {
-		document.getElementById("popupModal").style.display = "none";
-	}
 
 	// =====================================================================
 	// MailerLite subscribe helper — used by Northwinds lead forms

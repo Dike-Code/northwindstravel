@@ -540,7 +540,57 @@
 				<div>Curated in Nairobi · Routed worldwide.</div>
 			</div>
 		</footer>
-
+		<div
+			id="popupModal"
+			style="
+				display: none;
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: rgba(0, 0, 0, 0.5);
+				justify-content: center;
+				align-items: center;
+				z-index: 9999;
+			"
+		>
+			<div
+				style="
+					background: white;
+					padding: 25px;
+					border-radius: 12px;
+					text-align: center;
+					box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15);
+					max-width: 300px;
+					width: 90%;
+					font-family: system-ui, sans-serif;
+				"
+			>
+				<div style="font-size: 40px; margin-bottom: 10px">🎉</div>
+				<h3 style="margin: 0 0 10px; color: #1f2937">
+					You're on the list!
+				</h3>
+				<p style="color: #6b7280; font-size: 14px; margin: 0 0 20px">
+					Thank you for subscribing to our newsletter.
+				</p>
+				<button
+					type="button"
+					onclick="closePopup()"
+					style="
+						background: #10b981;
+						color: white;
+						border: none;
+						padding: 8px 20px;
+						border-radius: 6px;
+						font-weight: 600;
+						cursor: pointer;
+					"
+				>
+					Awesome
+				</button>
+			</div>
+		</div>
 		<script src="../../js/app.js"></script>
 	</body>
 </html>
